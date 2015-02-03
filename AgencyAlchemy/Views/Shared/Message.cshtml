@@ -1,0 +1,201 @@
+﻿
+<div class="ui-dialog ui-widget ui-widget-content ui-draggable" style="outline: 0px none; z-index: 2002; height: auto; width: 750px; top: 1227.5px; left: 300px; display: none;" tabindex="-1" role="dialog" aria-labelledby="ui-id-1">
+    <div class="ui-dialog-titlebar ui-widget-header ui-helper-clearfix">
+        <span id="ui-id-1" class="ui-dialog-title">Compose a new message</span>
+        <a class="ui-dialog-titlebar-close ui-corner-all" href="#" role="button">
+            <span class="ui-icon ui-icon-closethick">close</span>              
+        </a>
+    </div>
+    <div id="new_message_dialog" class="ui-dialog-content ui-widget-content" style="display: block; width: auto; min-height: 0px; height: 202.4px;" scrolltop="0" scrollleft="0">
+        <form id="edit_message_aixbx" class="simple_form message require_message old_style" novalidate="novalidate" method="post" data-remote="true" action="/manage/messages/aixbx" accept-charset="UTF-8">
+            <div style="margin:0;padding:0;display:inline">
+                <input type="hidden" value="✓" name="utf8" style="z-index: 10003;" />
+                <input type="hidden" value="put" name="_method" style="z-index: 10003;" />
+            </div>
+            <div class="recipients_wrapper">
+                <div class="field input required">
+                    <label id="recipients_label" class="bold_label">Recipients</label>  
+                    <div class="label_hint">
+                        Start typing a name to select recipients
+                    </div>
+                    <ul class="token-input-list-facebook" style="z-index: 10003;">
+                        <li class="token-input-token-facebook">
+                            <p>Harrison Ford</p>
+                            <span class="token-input-delete-token-facebook">×</span>
+                        </li>
+                        <li class="token-input-input-token-facebook">
+                            <input id="token-input-message_recipient_rids" type="text" autocomplete="off" style="outline: medium none; z-index: 10003; width: 30px;" />
+                            <tester style="position: absolute; top: -9999px; left: -9999px; width: auto… font-weight: 400; letter-spacing: 0px; white-space: nowrap;"></tester>
+                        </li>
+                    </ul>
+<input id="message_recipient_rids" class="" type="text" name="message[recipient_rids]" data-value="[{"id":"iq82v","name":"Harrison Ford"}]" data-search-url="https://playground-yopmail.watuapp.com/manage/staffers/search?mode=name" style="display: none; z-index: 10003;"></input>
+
+</div>
+<div class="field template_chooser">
+
+    <label class="bold_label">
+
+    Template:
+
+</label>
+<select id="message_template_name" class="selTemplateName" name="message[template_name]" style="z-index: 10003;">
+
+    <option value="generic-message" selected="selected" data-message="{"email_subject":"","email_body":"Dear {{recipient.preferred…,"template_name":"generic-message","sms":false,"email":true}" data-context-type="null">
+
+    Blank message
+
+</option>
+<option value="invite-to-job" data-message="{"email_subject":"Would you be interested in {{job.staffer_t…n","template_name":"invite-to-job","sms":false,"email":true}" data-context-type="Job">
+
+    Invite a staffer to a job
+
+</option>
+<option value="payroll-missing-staffer-data" data-message="{"email_subject":"IMPORTANT PAY INFORMATION. Please read thi…me":"payroll-missing-staffer-data","sms":false,"email":true}" data-context-type="null">
+
+        Missing payroll details
+
+    </option>
+
+</select>
+<select id="message_job_rid" class="selTemplateVar selTemplateVarJob" name="message[job_rid]" style="display: none; z-index: 10003;">
+
+    <option value="x0itr">
+
+    Santander Bank
+
+</option>
+<option value="s3fzj">
+
+    Nestle Roadshow
+
+</option>
+<option value="tnpa2">
+
+    Adidas Track Day
+
+</option>
+<option value="mrugh">
+
+        Superdry store opening
+
+    </option>
+
+</select>
+<select id="selPlaceholder" class="selTemplateVar placeholder" name="selPlaceholder" disabled="disabled" style="display: inline-block; z-index: 10003;">
+
+            []
+
+        </select>
+    </div>
+
+</div>
+<input id="message_rid" type="hidden" value="aixbx" name="message[rid]" style="z-index: 10003;"></input>
+
+<input id="message_save_target" class="message_save_target" type="hidden" value="https://playground-yopmail.watuapp.com/manage/messages/aixbx" name="message[save_target]" style="z-index: 10003;"></input>
+
+<div class="field"></div>
+
+<div class="not_sms_enabled sms_container">
+
+    <div class="label_hint">
+
+    <input type="hidden" value="0" name="message[sms]" style="z-index: 10003;"></input>
+
+
+To enable texting, 
+
+<a href="https://watuapp.com/contact" target="_blank">
+
+        contact us
+
+    </a>
+
+</div>
+<input type="hidden" value="0" name="message[sms]" disabled="disabled" style="z-index: 10003;"></input>
+
+<input id="message_sms" class="boolean optional disabled chkSMS" type="checkbox" value="1" name="message[sms]" disabled="disabled" style="z-index: 10003;"></input>
+
+<label class="sms bold_label" for="message_sms">
+
+    SMS message
+
+</label>
+<br></br>
+
+<div class="field">
+
+    <textarea id="message_sms_body" class="text required disabled form-control txtSMSBody" rows="20" required="required" placeholder="Type your message here..." name="message[sms_body]" disabled="disabled" cols="40" style="z-index: 10003;">
+
+            We just sent you an email about
+
+        </textarea>
+    </div>
+
+</div>
+<br></br>
+
+<div class="email_container">
+
+    <div class="dropping_files_overlay" style="z-index: 25000;">
+
+    <div class="legend">
+
+        Drop files here to attach them
+
+    </div>
+
+</div>
+<div class="email_subject_container">
+
+    <div class="attach" style="display: block;">
+
+    <input type="file" name="files[]" multiple="" style="z-index: 11000;"></input>
+
+</div>
+<div class="label_container">
+
+    <input type="hidden" value="0" name="message[email]" style="z-index: 10003;"></input>
+
+<input id="message_email" class="boolean optional chkEmail" type="checkbox" value="1" name="message[email]" checked="checked" style="z-index: 10003;"></input>
+
+<label class="email bold_label" for="message_email">
+
+        Email message
+
+    </label>
+
+</div>
+<div class="field">
+
+    <input id="message_email_subject" class="string required form-control txtEmailSubject" type="text" value="" size="50" required="required" placeholder="Enter a subject" name="message[email_subject]" label="Subject" style="z-index: 10003;"></input>
+
+    </div>
+
+</div>
+<br />
+
+<div class="attachments"></div>
+
+<div class="field">
+    <textarea id="message_email_body" class="text required form-control txtEmailBody" rows="20" required="required" placeholder="Type your message here..." name="message[email_body]" label="Message" cols="40" style="z-index: 10003; height: 100px;">
+
+            Dear {{recipient.preferred_name}},
+
+
+            Thanks
+
+            {{author.full_name}}
+            {{agency.name}}
+
+        </textarea>
+    </div>
+
+</div>
+<div class="button_bar">
+
+    <input class="button next" type="submit" value="Send" name="send" style="z-index: 10003;" />
+
+<div class="clearer"></div>
+
+</div>
+<div class="token-input-dropdown-facebook" style="display: none; position: absolute; top: 103.85px; left: 0px; width: 710px; z-index: 109999;"></div>

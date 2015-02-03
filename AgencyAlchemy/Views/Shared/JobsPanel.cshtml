@@ -1,0 +1,30 @@
+﻿
+@using AgencyAlchemy.Models;
+@model PagedItemsModel
+
+@{
+
+    WebGrid grid = new WebGrid(null, rowsPerPage: Model.PageSize, defaultSort: "event_startdate");
+
+    grid.Bind(Model.Items, rowCount: Model.TotalRows, autoSortAndPage: false);
+    
+}
+
+<div class="span12">
+	<div class="contain " id="user_manage_list-people_list">
+	    <h3>Jobs</h3>
+   
+        <div class="list_data" data-ng-controller="EventController">
+            @grid.GetHtml(tableStyle:"crud jobs_list",
+            columns: grid.Columns(
+                grid.Column("client_name", header:"Client",style:"name"),
+                grid.Column("event_title", header:"Event", style:"name"),
+                grid.Column("event_startdate", header:"Date", format: @<text>@item.event_startdate.ToString("MM/dd/yyyy")</text>, style:"dates"),
+                grid.Column("booked", header:"Applicants", style:"applications_count"),
+                grid.Column("total", header:"Positions", style:"shifts_count"),
+                grid.Column("", header:"", format: @<text><img src="@Url.Content("https://playground-yopmail.watuapp.com/assets/tenant/blank_avatar_200-a46401966443c298f244dc4632266848.png")" class="creator_avatar manager_avatar" alt="client name" /></text>,style:"creator")
+            ))
+        
+        </div>
+    </div>
+</div>

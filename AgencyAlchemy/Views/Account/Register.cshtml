@@ -1,0 +1,45 @@
+﻿@model AgencyAlchemy.Models.RegisterModel
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+@using(Html.BeginForm("Register", "Account", FormMethod.Post, new {Class="simple_form form-horizontal", id="new_user",  role="form"})){
+    @Html.AntiForgeryToken()
+
+    @Html.HiddenFor(m => m.AgencyID)
+
+    <div class="form-group email required user_email">
+        <div class="">
+            @Html.TextBoxFor(m => m.Email, new {Class="string email required form-control form-control",  maxlength="100", placeholder="Email address", size="50", type="email", required=true})
+        </div>
+    </div>
+    <div class="form-group password required user_password">
+        <div class="">
+            @Html.PasswordFor(m => m.Password, new {Class="password required form-control", placeholder="Password", size="50", type="password", required=true})
+        </div>
+    </div>
+    <div class="form-group password required user_password_confirmation">
+        <div class="">
+            @Html.PasswordFor(m => m.ConfirmPassword, new {Class="password required form-control",  placeholder="Repeat password", size="50", type="password", required=true})
+        </div>
+    </div>@*
+    <div class="form-group boolean optional user_eligible_to_work">
+        <div class="">
+            <div class="checkbox">
+                <input name="user[eligible_to_work]" type="hidden" value="0" />
+                <input class="boolean optional" id="user_eligible_to_work" name="user[eligible_to_work]" type="checkbox" value="1" />
+                <label class="boolean optional " for="user_eligible_to_work">I am eligible to work in United States</label>
+            </div>
+        </div>
+    </div>*@
+    <div class='form-group'>
+        <input class="button btn btn-lg btn-primary btn-block" data-message="You need to check that you are eligible to work in United States to continue" data-require-checked="user_eligible_to_work" name="commit" type="submit" value="Register" />
+    </div>
+}
+
+@{ String agency = String.Format("New to {0}?", Session["AgencyName"]); }
+<p class='other_pages'>
+    <a href="Login" class="btn btn-link">Already registered at @agency?</a>
+</p>
+

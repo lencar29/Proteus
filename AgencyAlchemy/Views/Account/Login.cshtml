@@ -1,0 +1,50 @@
+﻿@model AgencyAlchemy.Models.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<style type="text/css">
+            /*input:invalid {
+              border: 1px solid red;
+            }*/
+            input {
+                background-color:#fffbec;
+            }
+        </style>
+
+
+
+@using(Html.BeginForm("Login", "Account", FormMethod.Post, new {Class="simple_form form-horizontal",  role="form"})){
+   @Html.AntiForgeryToken()    
+        
+    <div class="form-group email required user_email">
+        <div class="">
+            @Html.TextBoxFor(m => m.Email, new {Class="string email required form-control form-control",  placeholder="Email address", size="50", type="email", required=true })            
+        </div>
+    </div>
+    <div class="form-group password required user_password">
+        <div class="">
+            @Html.PasswordFor(m => m.Password, new {Class="password required form-control", placeholder="Password", size="100", type="password", required=true })            
+        </div>
+    </div>
+    <div class="form-group boolean optional login_form_remember_me">
+        <div class="">
+            @*<div class="checkbox">*@
+                @Html.CheckBoxFor(m => m.RememberMe, new { type="checkbox"})   
+                @Html.LabelFor(m => m.RememberMe, "Remember me on this computer", new {Class="boolean optional "} )          
+            @*</div>*@
+        </div>
+    </div>
+    <div class='form-group'>
+        <input class="button btn btn-lg btn-primary btn-block" name="commit" type="submit" value="Log in" />
+    </div>
+}
+
+@{ String agency = String.Format("New to {0}?", Session["AgencyName"]); }
+<p class='other_pages'>   
+   @Html.RouteLink("Forgot your password", "PasswordReset", null, new {Class="btn btn-link"} )
+   @Html.RouteLink(agency, "Register", null, new {Class="btn btn-link"} ) 
+</p>
+

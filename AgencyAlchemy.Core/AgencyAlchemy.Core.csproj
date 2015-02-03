@@ -1,0 +1,691 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AD77FBB5-78BA-4AD7-B11A-2A877CDE9679}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AgencyAlchemy.Core</RootNamespace>
+    <AssemblyName>AgencyAlchemy.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">D:\AgencyAlchemy.Web\AgencyAlchemy\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0168</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataModel\account_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\acp_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\agency.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\agency_applicants.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\agency_fetch_by_domain_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\agency_fetch_clientmanager_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\agency_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\agency_fetch_talentmanager_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\agency_list_clientmanagers_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\agency_list_people_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\agency_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\agency_list_talentmanagers_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\agency_metrics_categories.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\agency_people.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\agency_people_rates.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\agency_people_rate_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\agency_people_roles.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\agency_talent_list_qs_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\agency_talent_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\AlchemyDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlchemyDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\AlchemyDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\AlchemyDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlchemyDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\booknow_current_status_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\booknow_info_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\booknow_update_status_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\book_setstatus_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\book_slot_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\book_talent_list_compsheet_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\book_talent_list_old_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\book_talent_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\client.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\clients_add_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\clients_directory_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\clients_editcontact_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\clients_edit_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\clients_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\clients_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\client_dispositions.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\client_list_events_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\collection.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\collectiontalent.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\collection_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\collection_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\collection_list_talent_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\compsheet_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\compsheet_metrics_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\contactlog_contacts_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\contactlog_create_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\contactlog_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\contactlog_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\contact_logs.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\contract.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\dashboard_agencyadmin_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\dashboard_agencyadmin_talent_todo_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\dashboard_talent_slots_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\documents_list_client_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\documents_list_event_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\documents_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\documents_list_talent_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\domain.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\emailupload_checkpermissions_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\event.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\eventdates_create_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\eventdates_edit_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\eventdates_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\eventdates_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\eventstatus_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\events_delete_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\events_directory_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\events_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\events_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\events_slots_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\events_slots_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\events_slots_metrics_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\events_talent_assign_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\events_talent_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\event_dates.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\event_people.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\event_slotavailable.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\event_slotdates.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\event_slots.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\event_statuses.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\flag.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\flags_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\flags_list_agency_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\flags_list_client_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\flags_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\Iagency.cs" />
+    <Compile Include="DataModel\Iagency_people.cs" />
+    <Compile Include="DataModel\Iagency_people_roles.cs" />
+    <Compile Include="DataModel\Iclient.cs" />
+    <Compile Include="DataModel\IDataServiceProvider.cs" />
+    <Compile Include="DataModel\Ievent.cs" />
+    <Compile Include="DataModel\Imedium.cs" />
+    <Compile Include="DataModel\Iperson.cs" />
+    <Compile Include="DataModel\Iskin.cs" />
+    <Compile Include="DataModel\Iv_agency_people.cs" />
+    <Compile Include="DataModel\Iv_events.cs" />
+    <Compile Include="DataModel\location.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\log.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\login_authorize_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\login_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\mailer.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\mailer_sendall_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\mediacategories_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\mediacategory.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\media_add_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\media_delete_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\media_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\media_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\medium.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\metric.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\metriccategories_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\metrics_categories.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\metrics_custom.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\note.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\page.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\pages_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\page_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\page_settings.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\payment.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\people_agencies_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\people_clients_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\people_create_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\people_fetch_by_pk_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\people_fetch_by_unique_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\people_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\people_locations.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\people_login_cookie_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\people_login_old_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\people_login_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\people_metrics.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\people_rating.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\person.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\positionstatus_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\position_statuses.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\privatenote_add_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\privatenote_edit_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\privatenote_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\private_notes.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\role.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Agency.cs" />
+    <Compile Include="Data\AgencyAccountSettings.cs" />
+    <Compile Include="Data\AgencyUserRole.cs" />
+    <Compile Include="Data\Applicant.cs" />
+    <Compile Include="Data\RegisteredUser.cs" />
+    <Compile Include="Data\Client.cs" />
+    <Compile Include="Data\Event.cs" />
+    <Compile Include="Data\EventStat.cs" />
+    <Compile Include="Data\IPersistable.cs" />
+    <Compile Include="Data\Media.cs" />
+    <Compile Include="Data\Person.cs" />
+    <Compile Include="DataModel\quicksearch_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\rate_types.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\rate_type_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\search_talent_slots_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\skillstree_category_add_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\skillstree_category_edit_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\skillstree_category_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\skillstree_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\skillstree_listall_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\skillstree_metric_add_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\skillstree_metric_edit_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\skillstree_metric_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\skin.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\skins_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\slotdate_add_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\slotdate_edit_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\slotdate_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\slots_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\slots_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\slots_talent_available_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\slots_talent_booked_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\slots_talent_unavailable_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\smartcollection_metrics.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\smartcollection_talent_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\state.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\tag.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\tags_list_records_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\tags_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\tags_list_top_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\tag_usage.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\talent_apply_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\talent_apply_finalize_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\talent_apply_general_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\talent_apply_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\talent_apply_new_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\talent_apply_upload_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\talent_directory_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\talent_edit_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\talent_fetch_metrics_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\talent_fetch_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\talent_list4event_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\talent_list_events_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\talent_list_openeventslots_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\talent_ratebase_add_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\talent_search_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\testimonial.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\testimonial_add_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\testimonial_edit_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\testimonial_list_Result.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\v_agency_people.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\v_events.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\v_log.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\v_people_metrics.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataModel\v_slots.cs">
+      <DependentUpon>AlchemyDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\PersistentObject.cs" />
+    <Compile Include="Data\Skin.cs" />
+    <Compile Include="Data\UserProfile.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\DataMapper.cs" />
+    <Compile Include="Utility\IServiceLocator.cs" />
+    <Compile Include="Utility\MvcPathDirector.cs" />
+    <Compile Include="Utility\PropertyExtractor.cs" />
+    <Compile Include="Utility\ServiceLocator.cs" />
+    <Compile Include="Utility\TicketManager.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EntityDeploy Include="DataModel\AlchemyDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AlchemyDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="DataModel\AlchemyDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AlchemyDataModel.edmx</DependentUpon>
+      <LastGenOutput>AlchemyDataModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="DataModel\AlchemyDataModel.edmx.diagram">
+      <DependentUpon>AlchemyDataModel.edmx</DependentUpon>
+    </None>
+    <None Include="DataModel\AlchemyDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AlchemyDataModel.edmx</DependentUpon>
+      <LastGenOutput>AlchemyDataModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

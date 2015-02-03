@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+
+
+@using AgencyAlchemy.Models;
+@model PagedItemsModel
+
+
+<div style="margin-left:15px;">
+    @Html.Partial("JobsPanel", Model)
+<div class="clearer"></div>
+
+<br />
+<br />
+<h2 class="with_line_patern">
+    <span>
+        <a href="https://playground-yopmail.watuapp.com/manage/staffers/search?q=state%E2%86%92pending">4 New Applicants (out of 9)</a>
+    </span>
+</h2>
+<ol class="cards_list users">
+    <li class="user card" data-rid="iq82v">
+        <div class="card_outer">
+            <div class="card_inner">
+                <div class="picture_container">
+                    <img class="avatar" title="Profile picture for Harrison Ford" src="https://playground-yopmail.watuapp.com/uploads/staffer/iq/82/v/iq82v/avatar/cropped_thumbnail_avatar.jpg?v=1422324577" alt="Profile picture"></img>
+                </div>
+                <div class="name card_title">
+                    <a href="https://playground-yopmail.watuapp.com/manage/staffers/iq82v">Harrison Ford<span class="age">35</span></a>
+                </div>
+                <div class="email data_item">
+                    <a class="message_pop_in" href="https://playground-yopmail.watuapp.com/manage/messages/new?rids=iq82v&type=email">harrison.ford@example.net</a>
+            </div>
+            <img class="user_status_band" title="Pending" src="~/Images/pending.png" alt="Pending Approval Band" />
+        </div>
+    </div>
+</li>
+</ol>
+</div>
+<div class="clearer"></div>
+
+                      

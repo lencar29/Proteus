@@ -1,0 +1,433 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+
+<title>Watu - Yop Mail</title>
+<link href='/favicon.ico' rel='shortcut icon'>
+<link href='/favicon.ico' rel='icon' type='image/vnd.microsoft.icon'>
+<link href='/favicon.png' rel='icon' type='image/png'>
+<link href='/apple-touch-icon.png' rel='apple-touch-icon'>
+<link href="Content/alchemy.css" media="all" rel="stylesheet" type="text/css" />
+<script src="https://playground-yopmail.watuapp.com/javascript_constants.js?v=1421892741" type="text/javascript"></script>
+<script src="https://playground-yopmail.watuapp.com//assets/manager_bundle-bb95a241ef4f159864b44aac54220bdb.js" type="text/javascript"></script>
+<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+<script src="https://playground-yopmail.watuapp.com//assets/tenant/manage/charts-12c7b5a7691a7c4cb59ce9c7cdaaca59.js" type="text/javascript"></script>
+<script src="https://playground-yopmail.watuapp.com//assets/tenant/manage/search-c560cab7e298b54e11c0130b7c5a1f57.js" type="text/javascript"></script>
+<script src="https://playground-yopmail.watuapp.com//assets/tenant/manage/portfolio-909aad56013d9139fa420ebafc44ecb2.js" type="text/javascript"></script>
+<script src="Scripts/talent_list.js" type="text/javascript"></script>
+</head>
+<body class='dashboard index dashboard_index'>
+<div class='navbar navbar-inverse navbar-fixed-top' id='top-bar' role='navigation'>
+<div class='container-fluid'>
+<div class='navbar-header'>
+<button class='navbar-toggle' data-target='.navbar-collapse' data-toggle='collapse' type='button'>
+<span class='sr-only'>Toggle navigation</span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+<span class='icon-bar'></span>
+</button>
+<div class='navbar-brand logo'><a href="https://playground-yopmail.watuapp.com/manage"><img alt="watu" src="/assets/tenant/manage/logo-e9951a725c63604f64d311b1ac8fca0e.png" /></a></div>
+</div>
+<div class='navbar-collapse collapse'>
+<ul class='nav navbar-nav navbar-right visible-xs'>
+
+<li class=''>
+<a href="https://playground-yopmail.watuapp.com/manage/shortlist"><i class="fa fa-upload fa-fw"></i>
+Jobs
+</a></li>
+<li class=''>
+<a href="https://playground-yopmail.watuapp.com/manage/jobs"><i class="fa fa-suitcase fa-fw"></i>
+Portfolios
+</a></li>
+<li class=''>
+<a href="https://playground-yopmail.watuapp.com/manage/messages"><i class="fa fa-envelope fa-fw"></i>
+Messages
+</a></li>
+
+<li class='dropdown'>
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-wrench fa-fw"></i>
+Settings
+</a><ul class='dropdown-menu'>
+
+<li class=''>
+<a href="https://playground-yopmail.watuapp.com/manage/pages/zntnq/edit"><i class="fa fa-book fa-fw"></i>
+Terms of engagement
+</a></li>
+<li class=''>
+<a href="https://playground-yopmail.watuapp.com/manage/configuration/close_account"><i class="fa fa-ban fa-fw"></i>
+Close account
+</a></li>
+</ul>
+
+<ul class='dropdown-menu'>
+<li class=''>
+<a href="https://playground-yopmail.watuapp.com/manage/profile/edit"><i class="fa fa-smile-o fa-fw"></i>
+My profile
+</a></li>
+<li class=''>
+<a href="https://playground-yopmail.watuapp.com/manage/avatar/edit"><i class="fa fa-camera fa-fw"></i>
+My picture
+</a></li>
+<li class=''>
+<a href="https://playground-yopmail.watuapp.com/manage/user/edit"><i class="fa fa-circle fa-fw"></i>
+My account
+</a></li>
+</ul>
+</li>
+
+<li>
+<a href="https://playground-yopmail.watuapp.com/session" data-method="delete" rel="nofollow"><i class="fa fa-sign-out fa-fw"></i>
+Log out
+</a></li>
+</ul>
+<form accept-charset="UTF-8" action="https://playground-yopmail.watuapp.com/manage/staffers/search" class="navbar-form navbar-right" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+<input class="form-control" id="qs" name="qs" placeholder="Search..." type="text" />
+</form>
+
+</div>
+</div>
+</div>
+<div class='container-fluid'>
+<div class='row'>
+<div class='col-sm-3 col-md-2' id='left-column'>
+<ul class='nav nav-sidebar'><li class='active'>
+
+<a href="https://playground-yopmail.watuapp.com/manage/shortlist"><i class="fa fa-upload fa-fw"></i>
+Jobs
+</a></li>
+<li class=''>
+<a href="https://playground-yopmail.watuapp.com/manage/jobs"><i class="fa fa-suitcase fa-fw"></i>
+Portfolios
+</a></li>
+<li class=''>
+<a href="https://playground-yopmail.watuapp.com/manage/messages"><i class="fa fa-envelope fa-fw"></i>
+Messages
+</a></li>
+
+<li class='dropdown'>
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-wrench fa-fw"></i>
+Settings
+</a><ul class='dropdown-menu'>
+
+<li class=''>
+<a href="https://playground-yopmail.watuapp.com/manage/pages/zntnq/edit"><i class="fa fa-book fa-fw"></i>
+Terms of engagement
+</a></li>
+<li class=''>
+<a href="https://playground-yopmail.watuapp.com/manage/configuration/close_account"><i class="fa fa-ban fa-fw"></i>
+Close account
+</a></li>
+</ul>
+
+<ul class='dropdown-menu'>
+<li class=''>
+<a href="https://playground-yopmail.watuapp.com/manage/profile/edit"><i class="fa fa-smile-o fa-fw"></i>
+My profile
+</a></li>
+<li class=''>
+<a href="https://playground-yopmail.watuapp.com/manage/avatar/edit"><i class="fa fa-camera fa-fw"></i>
+My picture
+</a></li>
+<li class=''>
+<a href="https://playground-yopmail.watuapp.com/manage/user/edit"><i class="fa fa-circle fa-fw"></i>
+My account
+</a></li>
+</ul>
+</li>
+
+<li>
+<a href="https://playground-yopmail.watuapp.com/session" data-method="delete" rel="nofollow"><i class="fa fa-sign-out fa-fw"></i>
+Log out
+</a></li>
+</ul>
+</div>
+<div class='col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2' id='central-column'>
+
+<ol class="breadcrumb"><li><a href="https://playground-yopmail.watuapp.com/">Yop Mail</a></li><li class="active">Dashboard</li></ol>
+<div id='flash_messages'>
+<div class='alert alert-icon alert-success'>
+<div class='icon'><i class="fa fa-check fa-fw"></i></div>
+<p>Welcome Stephen!</p>
+
+</div>
+
+</div>
+
+<div id='main-content'><div class='row'>
+<div class='col-xs-12'>
+<div class='playground'>
+<h1>Welcome to your playground!</h1>
+<p>This is your playground, where you can play with <a href="http://watuapp.com">Watu</a> and see how easy it is to build &amp; modify
+jobs, book staff, process a payroll summary and so on.</p>
+
+</div>
+
+<form accept-charset="UTF-8" action="https://playground-yopmail.watuapp.com/manage/staffers/search" class="search" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+
+<div class='full_text'>
+<input data-country="USA" data-distance-unit="km" data-fields="[{&quot;name&quot;:&quot;terms_of_engagement&quot;,&quot;type&quot;:&quot;check_box&quot;,&quot;title&quot;:&quot;Agrees to terms&quot;},{&quot;name&quot;:&quot;car_access&quot;,&quot;type&quot;:&quot;choice&quot;,&quot;title&quot;:&quot;Car access&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;yes&quot;,&quot;title&quot;:&quot;Yes&quot;},{&quot;name&quot;:&quot;no&quot;,&quot;title&quot;:&quot;No&quot;}]},{&quot;name&quot;:&quot;clothes_size_female&quot;,&quot;type&quot;:&quot;choice&quot;,&quot;title&quot;:&quot;Clothes size female&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;4&quot;,&quot;title&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;6&quot;,&quot;title&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;8&quot;,&quot;title&quot;:&quot;8&quot;},{&quot;name&quot;:&quot;10&quot;,&quot;title&quot;:&quot;10&quot;},{&quot;name&quot;:&quot;12&quot;,&quot;title&quot;:&quot;12&quot;},{&quot;name&quot;:&quot;14&quot;,&quot;title&quot;:&quot;14&quot;},{&quot;name&quot;:&quot;16&quot;,&quot;title&quot;:&quot;16&quot;},{&quot;name&quot;:&quot;18&quot;,&quot;title&quot;:&quot;18&quot;},{&quot;name&quot;:&quot;20&quot;,&quot;title&quot;:&quot;20&quot;},{&quot;name&quot;:&quot;22&quot;,&quot;title&quot;:&quot;22&quot;},{&quot;name&quot;:&quot;24&quot;,&quot;title&quot;:&quot;24&quot;}]},{&quot;name&quot;:&quot;clothes_size_male&quot;,&quot;type&quot;:&quot;choice&quot;,&quot;title&quot;:&quot;Clothes size male&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;x_small&quot;,&quot;title&quot;:&quot;XS&quot;},{&quot;name&quot;:&quot;small&quot;,&quot;title&quot;:&quot;S&quot;},{&quot;name&quot;:&quot;medium&quot;,&quot;title&quot;:&quot;M&quot;},{&quot;name&quot;:&quot;large&quot;,&quot;title&quot;:&quot;L&quot;},{&quot;name&quot;:&quot;x_large&quot;,&quot;title&quot;:&quot;XL&quot;},{&quot;name&quot;:&quot;xx_large&quot;,&quot;title&quot;:&quot;XXL&quot;}]},{&quot;name&quot;:&quot;collar&quot;,&quot;type&quot;:&quot;choice&quot;,&quot;title&quot;:&quot;Collar&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;14&quot;,&quot;title&quot;:&quot;14&quot;},{&quot;name&quot;:&quot;15&quot;,&quot;title&quot;:&quot;15&quot;},{&quot;name&quot;:&quot;16&quot;,&quot;title&quot;:&quot;16&quot;},{&quot;name&quot;:&quot;17&quot;,&quot;title&quot;:&quot;17&quot;},{&quot;name&quot;:&quot;18&quot;,&quot;title&quot;:&quot;18&quot;},{&quot;name&quot;:&quot;19&quot;,&quot;title&quot;:&quot;19&quot;},{&quot;name&quot;:&quot;20&quot;,&quot;title&quot;:&quot;20&quot;},{&quot;name&quot;:&quot;21&quot;,&quot;title&quot;:&quot;21&quot;},{&quot;name&quot;:&quot;22&quot;,&quot;title&quot;:&quot;22&quot;}]},{&quot;name&quot;:&quot;date_of_birth&quot;,&quot;type&quot;:&quot;date&quot;,&quot;title&quot;:&quot;Date of birth&quot;},{&quot;name&quot;:&quot;driving_license&quot;,&quot;type&quot;:&quot;choice&quot;,&quot;title&quot;:&quot;Driving license&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;yes&quot;,&quot;title&quot;:&quot;Yes&quot;},{&quot;name&quot;:&quot;no&quot;,&quot;title&quot;:&quot;No&quot;}]},{&quot;name&quot;:&quot;eligible_to_work&quot;,&quot;type&quot;:&quot;check_box&quot;,&quot;title&quot;:&quot;Eligible to work&quot;},{&quot;name&quot;:&quot;experience&quot;,&quot;type&quot;:&quot;multi_choice&quot;,&quot;title&quot;:&quot;Experience&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;leafleting&quot;,&quot;title&quot;:&quot;Leafleting&quot;},{&quot;name&quot;:&quot;sampling&quot;,&quot;title&quot;:&quot;Sampling&quot;},{&quot;name&quot;:&quot;data_capture&quot;,&quot;title&quot;:&quot;Data Capture&quot;},{&quot;name&quot;:&quot;merchandising&quot;,&quot;title&quot;:&quot;Merchandising&quot;},{&quot;name&quot;:&quot;market_research&quot;,&quot;title&quot;:&quot;Market Research&quot;},{&quot;name&quot;:&quot;sales&quot;,&quot;title&quot;:&quot;Sales&quot;},{&quot;name&quot;:&quot;hostessing&quot;,&quot;title&quot;:&quot;Hostessing&quot;},{&quot;name&quot;:&quot;modelling&quot;,&quot;title&quot;:&quot;Modelling&quot;},{&quot;name&quot;:&quot;compere_work&quot;,&quot;title&quot;:&quot;Compere Work&quot;},{&quot;name&quot;:&quot;mystery_shopping&quot;,&quot;title&quot;:&quot;Mystery Shopping&quot;},{&quot;name&quot;:&quot;rigging&quot;,&quot;title&quot;:&quot;Rigging&quot;},{&quot;name&quot;:&quot;in_store&quot;,&quot;title&quot;:&quot;In Store&quot;},{&quot;name&quot;:&quot;department_store&quot;,&quot;title&quot;:&quot;Department Store&quot;}]},{&quot;name&quot;:&quot;eye_color&quot;,&quot;type&quot;:&quot;choice&quot;,&quot;title&quot;:&quot;Eye colour&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;amber&quot;,&quot;title&quot;:&quot;Amber&quot;},{&quot;name&quot;:&quot;brown&quot;,&quot;title&quot;:&quot;Brown&quot;},{&quot;name&quot;:&quot;blue&quot;,&quot;title&quot;:&quot;Blue&quot;},{&quot;name&quot;:&quot;grey&quot;,&quot;title&quot;:&quot;Grey&quot;},{&quot;name&quot;:&quot;green&quot;,&quot;title&quot;:&quot;Green&quot;},{&quot;name&quot;:&quot;hazel&quot;,&quot;title&quot;:&quot;Hazel&quot;},{&quot;name&quot;:&quot;other&quot;,&quot;title&quot;:&quot;Other&quot;}]},{&quot;name&quot;:&quot;gender&quot;,&quot;type&quot;:&quot;choice&quot;,&quot;title&quot;:&quot;Gender&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;male&quot;,&quot;title&quot;:&quot;Male&quot;},{&quot;name&quot;:&quot;female&quot;,&quot;title&quot;:&quot;Female&quot;},{&quot;name&quot;:&quot;other&quot;,&quot;title&quot;:&quot;Other&quot;}]},{&quot;name&quot;:&quot;hair_color&quot;,&quot;type&quot;:&quot;choice&quot;,&quot;title&quot;:&quot;Hair colour&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;blond&quot;,&quot;title&quot;:&quot;Blond&quot;},{&quot;name&quot;:&quot;brown&quot;,&quot;title&quot;:&quot;Brown&quot;},{&quot;name&quot;:&quot;black&quot;,&quot;title&quot;:&quot;Black&quot;},{&quot;name&quot;:&quot;red&quot;,&quot;title&quot;:&quot;Red&quot;},{&quot;name&quot;:&quot;grey&quot;,&quot;title&quot;:&quot;Grey&quot;},{&quot;name&quot;:&quot;other&quot;,&quot;title&quot;:&quot;Other&quot;}]},{&quot;name&quot;:&quot;height&quot;,&quot;type&quot;:&quot;choice&quot;,&quot;title&quot;:&quot;Height&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;4_ft_10&quot;,&quot;title&quot;:&quot;4 ft 10\&quot;&quot;},{&quot;name&quot;:&quot;4_ft_11&quot;,&quot;title&quot;:&quot;4 ft 11\&quot;&quot;},{&quot;name&quot;:&quot;5_ft&quot;,&quot;title&quot;:&quot;5 ft&quot;},{&quot;name&quot;:&quot;5_ft_1&quot;,&quot;title&quot;:&quot;5 ft 1\&quot;&quot;},{&quot;name&quot;:&quot;5_ft_2&quot;,&quot;title&quot;:&quot;5 ft 2\&quot;&quot;},{&quot;name&quot;:&quot;5_ft_3&quot;,&quot;title&quot;:&quot;5 ft 3\&quot;&quot;},{&quot;name&quot;:&quot;5_ft_4&quot;,&quot;title&quot;:&quot;5 ft 4\&quot;&quot;},{&quot;name&quot;:&quot;5_ft_5&quot;,&quot;title&quot;:&quot;5 ft 5\&quot;&quot;},{&quot;name&quot;:&quot;5_ft_6&quot;,&quot;title&quot;:&quot;5 ft 6\&quot;&quot;},{&quot;name&quot;:&quot;5_ft_7&quot;,&quot;title&quot;:&quot;5 ft 7\&quot;&quot;},{&quot;name&quot;:&quot;5_ft_8&quot;,&quot;title&quot;:&quot;5 ft 8\&quot;&quot;},{&quot;name&quot;:&quot;5_ft_9&quot;,&quot;title&quot;:&quot;5 ft 9\&quot;&quot;},{&quot;name&quot;:&quot;5_ft_10&quot;,&quot;title&quot;:&quot;5 ft 10\&quot;&quot;},{&quot;name&quot;:&quot;5_ft_11&quot;,&quot;title&quot;:&quot;5 ft 11\&quot;&quot;},{&quot;name&quot;:&quot;6_ft&quot;,&quot;title&quot;:&quot;6 ft&quot;},{&quot;name&quot;:&quot;6_ft_1&quot;,&quot;title&quot;:&quot;6 ft 1\&quot;&quot;},{&quot;name&quot;:&quot;6_ft_2&quot;,&quot;title&quot;:&quot;6 ft 2\&quot;&quot;},{&quot;name&quot;:&quot;6_ft_3&quot;,&quot;title&quot;:&quot;6 ft 3\&quot;&quot;},{&quot;name&quot;:&quot;6_ft_4&quot;,&quot;title&quot;:&quot;6 ft 4\&quot;&quot;},{&quot;name&quot;:&quot;6_ft_5&quot;,&quot;title&quot;:&quot;6 ft 5\&quot;&quot;},{&quot;name&quot;:&quot;6_ft_6&quot;,&quot;title&quot;:&quot;6 ft 6\&quot;&quot;},{&quot;name&quot;:&quot;6_ft_7&quot;,&quot;title&quot;:&quot;6 ft 7\&quot;&quot;},{&quot;name&quot;:&quot;6_ft_8&quot;,&quot;title&quot;:&quot;6 ft 8\&quot;&quot;},{&quot;name&quot;:&quot;6_ft_9&quot;,&quot;title&quot;:&quot;6 ft 9\&quot;&quot;},{&quot;name&quot;:&quot;6_ft_10&quot;,&quot;title&quot;:&quot;6 ft 10\&quot;&quot;},{&quot;name&quot;:&quot;6_ft_11&quot;,&quot;title&quot;:&quot;6 ft 11\&quot;&quot;},{&quot;name&quot;:&quot;7_ft&quot;,&quot;title&quot;:&quot;7 ft&quot;}]},{&quot;name&quot;:&quot;hips&quot;,&quot;type&quot;:&quot;choice&quot;,&quot;title&quot;:&quot;Hips&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;20&quot;,&quot;title&quot;:&quot;20&quot;},{&quot;name&quot;:&quot;21&quot;,&quot;title&quot;:&quot;21&quot;},{&quot;name&quot;:&quot;22&quot;,&quot;title&quot;:&quot;22&quot;},{&quot;name&quot;:&quot;23&quot;,&quot;title&quot;:&quot;23&quot;},{&quot;name&quot;:&quot;24&quot;,&quot;title&quot;:&quot;24&quot;},{&quot;name&quot;:&quot;25&quot;,&quot;title&quot;:&quot;25&quot;},{&quot;name&quot;:&quot;26&quot;,&quot;title&quot;:&quot;26&quot;},{&quot;name&quot;:&quot;27&quot;,&quot;title&quot;:&quot;27&quot;},{&quot;name&quot;:&quot;28&quot;,&quot;title&quot;:&quot;28&quot;},{&quot;name&quot;:&quot;29&quot;,&quot;title&quot;:&quot;29&quot;},{&quot;name&quot;:&quot;30&quot;,&quot;title&quot;:&quot;30&quot;},{&quot;name&quot;:&quot;31&quot;,&quot;title&quot;:&quot;31&quot;},{&quot;name&quot;:&quot;32&quot;,&quot;title&quot;:&quot;32&quot;},{&quot;name&quot;:&quot;33&quot;,&quot;title&quot;:&quot;33&quot;},{&quot;name&quot;:&quot;34&quot;,&quot;title&quot;:&quot;34&quot;},{&quot;name&quot;:&quot;35&quot;,&quot;title&quot;:&quot;35&quot;},{&quot;name&quot;:&quot;36&quot;,&quot;title&quot;:&quot;36&quot;},{&quot;name&quot;:&quot;37&quot;,&quot;title&quot;:&quot;37&quot;},{&quot;name&quot;:&quot;38&quot;,&quot;title&quot;:&quot;38&quot;},{&quot;name&quot;:&quot;39&quot;,&quot;title&quot;:&quot;39&quot;},{&quot;name&quot;:&quot;40&quot;,&quot;title&quot;:&quot;40&quot;},{&quot;name&quot;:&quot;41&quot;,&quot;title&quot;:&quot;41&quot;},{&quot;name&quot;:&quot;42&quot;,&quot;title&quot;:&quot;42&quot;},{&quot;name&quot;:&quot;43&quot;,&quot;title&quot;:&quot;43&quot;},{&quot;name&quot;:&quot;44&quot;,&quot;title&quot;:&quot;44&quot;},{&quot;name&quot;:&quot;45&quot;,&quot;title&quot;:&quot;45&quot;},{&quot;name&quot;:&quot;46&quot;,&quot;title&quot;:&quot;46&quot;},{&quot;name&quot;:&quot;47&quot;,&quot;title&quot;:&quot;47&quot;},{&quot;name&quot;:&quot;48&quot;,&quot;title&quot;:&quot;48&quot;},{&quot;name&quot;:&quot;49&quot;,&quot;title&quot;:&quot;49&quot;},{&quot;name&quot;:&quot;50&quot;,&quot;title&quot;:&quot;50&quot;}]},{&quot;name&quot;:&quot;industry_sectors&quot;,&quot;type&quot;:&quot;multi_choice&quot;,&quot;title&quot;:&quot;Industry sectors&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;children_brands&quot;,&quot;title&quot;:&quot;Children Brands&quot;},{&quot;name&quot;:&quot;luxury&quot;,&quot;title&quot;:&quot;Luxury&quot;},{&quot;name&quot;:&quot;beauty_products&quot;,&quot;title&quot;:&quot;Beauty Products&quot;},{&quot;name&quot;:&quot;sports&quot;,&quot;title&quot;:&quot;Sports&quot;},{&quot;name&quot;:&quot;automotive&quot;,&quot;title&quot;:&quot;Automotive&quot;},{&quot;name&quot;:&quot;technology&quot;,&quot;title&quot;:&quot;Technology&quot;},{&quot;name&quot;:&quot;mobile&quot;,&quot;title&quot;:&quot;Mobile&quot;},{&quot;name&quot;:&quot;drinks&quot;,&quot;title&quot;:&quot;Drinks&quot;},{&quot;name&quot;:&quot;alcohol&quot;,&quot;title&quot;:&quot;Alcohol&quot;},{&quot;name&quot;:&quot;tobacco&quot;,&quot;title&quot;:&quot;Tobacco&quot;},{&quot;name&quot;:&quot;gaming&quot;,&quot;title&quot;:&quot;Gaming&quot;},{&quot;name&quot;:&quot;food&quot;,&quot;title&quot;:&quot;Food&quot;}]},{&quot;name&quot;:&quot;inside_leg&quot;,&quot;type&quot;:&quot;choice&quot;,&quot;title&quot;:&quot;Inside leg&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;20&quot;,&quot;title&quot;:&quot;20&quot;},{&quot;name&quot;:&quot;21&quot;,&quot;title&quot;:&quot;21&quot;},{&quot;name&quot;:&quot;22&quot;,&quot;title&quot;:&quot;22&quot;},{&quot;name&quot;:&quot;23&quot;,&quot;title&quot;:&quot;23&quot;},{&quot;name&quot;:&quot;24&quot;,&quot;title&quot;:&quot;24&quot;},{&quot;name&quot;:&quot;25&quot;,&quot;title&quot;:&quot;25&quot;},{&quot;name&quot;:&quot;26&quot;,&quot;title&quot;:&quot;26&quot;},{&quot;name&quot;:&quot;27&quot;,&quot;title&quot;:&quot;27&quot;},{&quot;name&quot;:&quot;28&quot;,&quot;title&quot;:&quot;28&quot;},{&quot;name&quot;:&quot;29&quot;,&quot;title&quot;:&quot;29&quot;},{&quot;name&quot;:&quot;30&quot;,&quot;title&quot;:&quot;30&quot;},{&quot;name&quot;:&quot;31&quot;,&quot;title&quot;:&quot;31&quot;},{&quot;name&quot;:&quot;32&quot;,&quot;title&quot;:&quot;32&quot;},{&quot;name&quot;:&quot;33&quot;,&quot;title&quot;:&quot;33&quot;},{&quot;name&quot;:&quot;34&quot;,&quot;title&quot;:&quot;34&quot;},{&quot;name&quot;:&quot;35&quot;,&quot;title&quot;:&quot;35&quot;},{&quot;name&quot;:&quot;36&quot;,&quot;title&quot;:&quot;36&quot;},{&quot;name&quot;:&quot;37&quot;,&quot;title&quot;:&quot;37&quot;},{&quot;name&quot;:&quot;38&quot;,&quot;title&quot;:&quot;38&quot;},{&quot;name&quot;:&quot;39&quot;,&quot;title&quot;:&quot;39&quot;},{&quot;name&quot;:&quot;40&quot;,&quot;title&quot;:&quot;40&quot;},{&quot;name&quot;:&quot;41&quot;,&quot;title&quot;:&quot;41&quot;},{&quot;name&quot;:&quot;42&quot;,&quot;title&quot;:&quot;42&quot;},{&quot;name&quot;:&quot;43&quot;,&quot;title&quot;:&quot;43&quot;},{&quot;name&quot;:&quot;44&quot;,&quot;title&quot;:&quot;44&quot;},{&quot;name&quot;:&quot;45&quot;,&quot;title&quot;:&quot;45&quot;},{&quot;name&quot;:&quot;46&quot;,&quot;title&quot;:&quot;46&quot;},{&quot;name&quot;:&quot;47&quot;,&quot;title&quot;:&quot;47&quot;},{&quot;name&quot;:&quot;48&quot;,&quot;title&quot;:&quot;48&quot;},{&quot;name&quot;:&quot;49&quot;,&quot;title&quot;:&quot;49&quot;},{&quot;name&quot;:&quot;50&quot;,&quot;title&quot;:&quot;50&quot;}]},{&quot;name&quot;:&quot;language&quot;,&quot;type&quot;:&quot;choice&quot;,&quot;title&quot;:&quot;Language&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;afrikaans&quot;,&quot;title&quot;:&quot;Afrikaans&quot;},{&quot;name&quot;:&quot;american_sign_language&quot;,&quot;title&quot;:&quot;American Sign Language&quot;},{&quot;name&quot;:&quot;arabic&quot;,&quot;title&quot;:&quot;Arabic&quot;},{&quot;name&quot;:&quot;basque&quot;,&quot;title&quot;:&quot;Basque&quot;},{&quot;name&quot;:&quot;bengali&quot;,&quot;title&quot;:&quot;Bengali&quot;},{&quot;name&quot;:&quot;bosnian&quot;,&quot;title&quot;:&quot;Bosnian&quot;},{&quot;name&quot;:&quot;bulgarian&quot;,&quot;title&quot;:&quot;Bulgarian&quot;},{&quot;name&quot;:&quot;burmese&quot;,&quot;title&quot;:&quot;Burmese&quot;},{&quot;name&quot;:&quot;cantonese&quot;,&quot;title&quot;:&quot;Cantonese&quot;},{&quot;name&quot;:&quot;catalan&quot;,&quot;title&quot;:&quot;Catalan&quot;},{&quot;name&quot;:&quot;chinese&quot;,&quot;title&quot;:&quot;Chinese&quot;},{&quot;name&quot;:&quot;croatian&quot;,&quot;title&quot;:&quot;Croatian&quot;},{&quot;name&quot;:&quot;czech&quot;,&quot;title&quot;:&quot;Czech&quot;},{&quot;name&quot;:&quot;danish&quot;,&quot;title&quot;:&quot;Danish&quot;},{&quot;name&quot;:&quot;dutch&quot;,&quot;title&quot;:&quot;Dutch&quot;},{&quot;name&quot;:&quot;english&quot;,&quot;title&quot;:&quot;English&quot;},{&quot;name&quot;:&quot;farsi&quot;,&quot;title&quot;:&quot;Farsi&quot;},{&quot;name&quot;:&quot;finnish&quot;,&quot;title&quot;:&quot;Finnish&quot;},{&quot;name&quot;:&quot;flemish&quot;,&quot;title&quot;:&quot;Flemish&quot;},{&quot;name&quot;:&quot;french&quot;,&quot;title&quot;:&quot;French&quot;},{&quot;name&quot;:&quot;german&quot;,&quot;title&quot;:&quot;German&quot;},{&quot;name&quot;:&quot;greek&quot;,&quot;title&quot;:&quot;Greek&quot;},{&quot;name&quot;:&quot;gujarati&quot;,&quot;title&quot;:&quot;Gujarati&quot;},{&quot;name&quot;:&quot;hebrew&quot;,&quot;title&quot;:&quot;Hebrew&quot;},{&quot;name&quot;:&quot;hindi&quot;,&quot;title&quot;:&quot;Hindi&quot;},{&quot;name&quot;:&quot;hungarian&quot;,&quot;title&quot;:&quot;Hungarian&quot;},{&quot;name&quot;:&quot;icelandic&quot;,&quot;title&quot;:&quot;Icelandic&quot;},{&quot;name&quot;:&quot;indonesian&quot;,&quot;title&quot;:&quot;Indonesian&quot;},{&quot;name&quot;:&quot;italian&quot;,&quot;title&quot;:&quot;Italian&quot;},{&quot;name&quot;:&quot;japanese&quot;,&quot;title&quot;:&quot;Japanese&quot;},{&quot;name&quot;:&quot;javanese&quot;,&quot;title&quot;:&quot;Javanese&quot;},{&quot;name&quot;:&quot;korean&quot;,&quot;title&quot;:&quot;Korean&quot;},{&quot;name&quot;:&quot;latvian&quot;,&quot;title&quot;:&quot;Latvian&quot;},{&quot;name&quot;:&quot;lithuanian&quot;,&quot;title&quot;:&quot;Lithuanian&quot;},{&quot;name&quot;:&quot;macedonian&quot;,&quot;title&quot;:&quot;Macedonian&quot;},{&quot;name&quot;:&quot;malay&quot;,&quot;title&quot;:&quot;Malay&quot;},{&quot;name&quot;:&quot;maltese&quot;,&quot;title&quot;:&quot;Maltese&quot;},{&quot;name&quot;:&quot;mandarin&quot;,&quot;title&quot;:&quot;Mandarin&quot;},{&quot;name&quot;:&quot;norwegian&quot;,&quot;title&quot;:&quot;Norwegian&quot;},{&quot;name&quot;:&quot;polish&quot;,&quot;title&quot;:&quot;Polish&quot;},{&quot;name&quot;:&quot;portuguese&quot;,&quot;title&quot;:&quot;Portuguese&quot;},{&quot;name&quot;:&quot;punjabi&quot;,&quot;title&quot;:&quot;Punjabi&quot;},{&quot;name&quot;:&quot;romanian&quot;,&quot;title&quot;:&quot;Romanian&quot;},{&quot;name&quot;:&quot;russian&quot;,&quot;title&quot;:&quot;Russian&quot;},{&quot;name&quot;:&quot;spanish&quot;,&quot;title&quot;:&quot;Spanish&quot;},{&quot;name&quot;:&quot;swahili&quot;,&quot;title&quot;:&quot;Swahili&quot;},{&quot;name&quot;:&quot;swedish&quot;,&quot;title&quot;:&quot;Swedish&quot;},{&quot;name&quot;:&quot;taiwanese&quot;,&quot;title&quot;:&quot;Taiwanese&quot;},{&quot;name&quot;:&quot;turkish&quot;,&quot;title&quot;:&quot;Turkish&quot;},{&quot;name&quot;:&quot;urdu&quot;,&quot;title&quot;:&quot;Urdu&quot;},{&quot;name&quot;:&quot;vietnamese&quot;,&quot;title&quot;:&quot;Vietnamese&quot;},{&quot;name&quot;:&quot;welsh&quot;,&quot;title&quot;:&quot;Welsh&quot;}]},{&quot;name&quot;:&quot;piercings&quot;,&quot;type&quot;:&quot;choice&quot;,&quot;title&quot;:&quot;Piercings&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;visible&quot;,&quot;title&quot;:&quot;Visible&quot;},{&quot;name&quot;:&quot;not_visible&quot;,&quot;title&quot;:&quot;Not visible&quot;},{&quot;name&quot;:&quot;none&quot;,&quot;title&quot;:&quot;None&quot;}]},{&quot;name&quot;:&quot;roles&quot;,&quot;type&quot;:&quot;role&quot;,&quot;title&quot;:&quot;Roles&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;qy1uy&quot;,&quot;title&quot;:&quot;Assistant Event Manager&quot;},{&quot;name&quot;:&quot;mh8hs&quot;,&quot;title&quot;:&quot;Brand Ambassador&quot;},{&quot;name&quot;:&quot;yww7b&quot;,&quot;title&quot;:&quot;Event Manager&quot;},{&quot;name&quot;:&quot;hiuoo&quot;,&quot;title&quot;:&quot;Supervisor&quot;}]},{&quot;name&quot;:&quot;secondary_language&quot;,&quot;type&quot;:&quot;choice&quot;,&quot;title&quot;:&quot;Secondary Language&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;afrikaans&quot;,&quot;title&quot;:&quot;Afrikaans&quot;},{&quot;name&quot;:&quot;american_sign_language&quot;,&quot;title&quot;:&quot;American Sign Language&quot;},{&quot;name&quot;:&quot;arabic&quot;,&quot;title&quot;:&quot;Arabic&quot;},{&quot;name&quot;:&quot;basque&quot;,&quot;title&quot;:&quot;Basque&quot;},{&quot;name&quot;:&quot;bengali&quot;,&quot;title&quot;:&quot;Bengali&quot;},{&quot;name&quot;:&quot;bosnian&quot;,&quot;title&quot;:&quot;Bosnian&quot;},{&quot;name&quot;:&quot;bulgarian&quot;,&quot;title&quot;:&quot;Bulgarian&quot;},{&quot;name&quot;:&quot;burmese&quot;,&quot;title&quot;:&quot;Burmese&quot;},{&quot;name&quot;:&quot;cantonese&quot;,&quot;title&quot;:&quot;Cantonese&quot;},{&quot;name&quot;:&quot;catalan&quot;,&quot;title&quot;:&quot;Catalan&quot;},{&quot;name&quot;:&quot;chinese&quot;,&quot;title&quot;:&quot;Chinese&quot;},{&quot;name&quot;:&quot;croatian&quot;,&quot;title&quot;:&quot;Croatian&quot;},{&quot;name&quot;:&quot;czech&quot;,&quot;title&quot;:&quot;Czech&quot;},{&quot;name&quot;:&quot;danish&quot;,&quot;title&quot;:&quot;Danish&quot;},{&quot;name&quot;:&quot;dutch&quot;,&quot;title&quot;:&quot;Dutch&quot;},{&quot;name&quot;:&quot;english&quot;,&quot;title&quot;:&quot;English&quot;},{&quot;name&quot;:&quot;farsi&quot;,&quot;title&quot;:&quot;Farsi&quot;},{&quot;name&quot;:&quot;finnish&quot;,&quot;title&quot;:&quot;Finnish&quot;},{&quot;name&quot;:&quot;flemish&quot;,&quot;title&quot;:&quot;Flemish&quot;},{&quot;name&quot;:&quot;french&quot;,&quot;title&quot;:&quot;French&quot;},{&quot;name&quot;:&quot;german&quot;,&quot;title&quot;:&quot;German&quot;},{&quot;name&quot;:&quot;greek&quot;,&quot;title&quot;:&quot;Greek&quot;},{&quot;name&quot;:&quot;gujarati&quot;,&quot;title&quot;:&quot;Gujarati&quot;},{&quot;name&quot;:&quot;hebrew&quot;,&quot;title&quot;:&quot;Hebrew&quot;},{&quot;name&quot;:&quot;hindi&quot;,&quot;title&quot;:&quot;Hindi&quot;},{&quot;name&quot;:&quot;hungarian&quot;,&quot;title&quot;:&quot;Hungarian&quot;},{&quot;name&quot;:&quot;icelandic&quot;,&quot;title&quot;:&quot;Icelandic&quot;},{&quot;name&quot;:&quot;indonesian&quot;,&quot;title&quot;:&quot;Indonesian&quot;},{&quot;name&quot;:&quot;italian&quot;,&quot;title&quot;:&quot;Italian&quot;},{&quot;name&quot;:&quot;japanese&quot;,&quot;title&quot;:&quot;Japanese&quot;},{&quot;name&quot;:&quot;javanese&quot;,&quot;title&quot;:&quot;Javanese&quot;},{&quot;name&quot;:&quot;korean&quot;,&quot;title&quot;:&quot;Korean&quot;},{&quot;name&quot;:&quot;latvian&quot;,&quot;title&quot;:&quot;Latvian&quot;},{&quot;name&quot;:&quot;lithuanian&quot;,&quot;title&quot;:&quot;Lithuanian&quot;},{&quot;name&quot;:&quot;macedonian&quot;,&quot;title&quot;:&quot;Macedonian&quot;},{&quot;name&quot;:&quot;malay&quot;,&quot;title&quot;:&quot;Malay&quot;},{&quot;name&quot;:&quot;maltese&quot;,&quot;title&quot;:&quot;Maltese&quot;},{&quot;name&quot;:&quot;mandarin&quot;,&quot;title&quot;:&quot;Mandarin&quot;},{&quot;name&quot;:&quot;norwegian&quot;,&quot;title&quot;:&quot;Norwegian&quot;},{&quot;name&quot;:&quot;polish&quot;,&quot;title&quot;:&quot;Polish&quot;},{&quot;name&quot;:&quot;portuguese&quot;,&quot;title&quot;:&quot;Portuguese&quot;},{&quot;name&quot;:&quot;punjabi&quot;,&quot;title&quot;:&quot;Punjabi&quot;},{&quot;name&quot;:&quot;romanian&quot;,&quot;title&quot;:&quot;Romanian&quot;},{&quot;name&quot;:&quot;russian&quot;,&quot;title&quot;:&quot;Russian&quot;},{&quot;name&quot;:&quot;spanish&quot;,&quot;title&quot;:&quot;Spanish&quot;},{&quot;name&quot;:&quot;swahili&quot;,&quot;title&quot;:&quot;Swahili&quot;},{&quot;name&quot;:&quot;swedish&quot;,&quot;title&quot;:&quot;Swedish&quot;},{&quot;name&quot;:&quot;taiwanese&quot;,&quot;title&quot;:&quot;Taiwanese&quot;},{&quot;name&quot;:&quot;turkish&quot;,&quot;title&quot;:&quot;Turkish&quot;},{&quot;name&quot;:&quot;urdu&quot;,&quot;title&quot;:&quot;Urdu&quot;},{&quot;name&quot;:&quot;vietnamese&quot;,&quot;title&quot;:&quot;Vietnamese&quot;},{&quot;name&quot;:&quot;welsh&quot;,&quot;title&quot;:&quot;Welsh&quot;}]},{&quot;name&quot;:&quot;shoe_size&quot;,&quot;type&quot;:&quot;choice&quot;,&quot;title&quot;:&quot;Shoe size&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;2&quot;,&quot;title&quot;:&quot;2&quot;},{&quot;name&quot;:&quot;2_5&quot;,&quot;title&quot;:&quot;2.5&quot;},{&quot;name&quot;:&quot;3&quot;,&quot;title&quot;:&quot;3&quot;},{&quot;name&quot;:&quot;3_5&quot;,&quot;title&quot;:&quot;3.5&quot;},{&quot;name&quot;:&quot;4&quot;,&quot;title&quot;:&quot;4&quot;},{&quot;name&quot;:&quot;4_5&quot;,&quot;title&quot;:&quot;4.5&quot;},{&quot;name&quot;:&quot;5&quot;,&quot;title&quot;:&quot;5&quot;},{&quot;name&quot;:&quot;5_5&quot;,&quot;title&quot;:&quot;5.5&quot;},{&quot;name&quot;:&quot;6&quot;,&quot;title&quot;:&quot;6&quot;},{&quot;name&quot;:&quot;6_5&quot;,&quot;title&quot;:&quot;6.5&quot;},{&quot;name&quot;:&quot;7&quot;,&quot;title&quot;:&quot;7&quot;},{&quot;name&quot;:&quot;7_5&quot;,&quot;title&quot;:&quot;7.5&quot;},{&quot;name&quot;:&quot;8&quot;,&quot;title&quot;:&quot;8&quot;},{&quot;name&quot;:&quot;8_5&quot;,&quot;title&quot;:&quot;8.5&quot;},{&quot;name&quot;:&quot;9&quot;,&quot;title&quot;:&quot;9&quot;},{&quot;name&quot;:&quot;9_5&quot;,&quot;title&quot;:&quot;9.5&quot;},{&quot;name&quot;:&quot;10&quot;,&quot;title&quot;:&quot;10&quot;},{&quot;name&quot;:&quot;10_5&quot;,&quot;title&quot;:&quot;10.5&quot;},{&quot;name&quot;:&quot;11&quot;,&quot;title&quot;:&quot;11&quot;},{&quot;name&quot;:&quot;11_5&quot;,&quot;title&quot;:&quot;11.5&quot;},{&quot;name&quot;:&quot;12&quot;,&quot;title&quot;:&quot;12&quot;},{&quot;name&quot;:&quot;12_5&quot;,&quot;title&quot;:&quot;12.5&quot;},{&quot;name&quot;:&quot;13&quot;,&quot;title&quot;:&quot;13&quot;},{&quot;name&quot;:&quot;13_5&quot;,&quot;title&quot;:&quot;13.5&quot;},{&quot;name&quot;:&quot;14&quot;,&quot;title&quot;:&quot;14&quot;}]},{&quot;name&quot;:&quot;skills&quot;,&quot;type&quot;:&quot;multi_choice&quot;,&quot;title&quot;:&quot;Skills&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;actor&quot;,&quot;title&quot;:&quot;Actor&quot;},{&quot;name&quot;:&quot;singer&quot;,&quot;title&quot;:&quot;Singer&quot;},{&quot;name&quot;:&quot;dancer&quot;,&quot;title&quot;:&quot;Dancer&quot;},{&quot;name&quot;:&quot;compere&quot;,&quot;title&quot;:&quot;Compere&quot;},{&quot;name&quot;:&quot;contortionist&quot;,&quot;title&quot;:&quot;Contortionist&quot;},{&quot;name&quot;:&quot;stilt_walker&quot;,&quot;title&quot;:&quot;Stilt Walker&quot;},{&quot;name&quot;:&quot;juggler&quot;,&quot;title&quot;:&quot;Juggler&quot;},{&quot;name&quot;:&quot;fire_eater&quot;,&quot;title&quot;:&quot;Fire Eater&quot;},{&quot;name&quot;:&quot;face_painter&quot;,&quot;title&quot;:&quot;Face Painter&quot;},{&quot;name&quot;:&quot;roller_blader&quot;,&quot;title&quot;:&quot;Roller Blader&quot;},{&quot;name&quot;:&quot;chef&quot;,&quot;title&quot;:&quot;Chef&quot;},{&quot;name&quot;:&quot;make_up_artist&quot;,&quot;title&quot;:&quot;Make Up Artist&quot;},{&quot;name&quot;:&quot;photographer&quot;,&quot;title&quot;:&quot;Photographer&quot;},{&quot;name&quot;:&quot;caricaturist&quot;,&quot;title&quot;:&quot;Caricaturist&quot;},{&quot;name&quot;:&quot;dj&quot;,&quot;title&quot;:&quot;DJ&quot;},{&quot;name&quot;:&quot;mc&quot;,&quot;title&quot;:&quot;MC&quot;},{&quot;name&quot;:&quot;masseuse&quot;,&quot;title&quot;:&quot;Masseuse&quot;},{&quot;name&quot;:&quot;nail_technician&quot;,&quot;title&quot;:&quot;Nail Technician&quot;},{&quot;name&quot;:&quot;balloon_artist&quot;,&quot;title&quot;:&quot;Balloon Artist&quot;},{&quot;name&quot;:&quot;childrens_entertainer&quot;,&quot;title&quot;:&quot;Children&#x27;s Entertainer&quot;},{&quot;name&quot;:&quot;costume_work&quot;,&quot;title&quot;:&quot;Costume Work&quot;}]},{&quot;name&quot;:&quot;tattoos&quot;,&quot;type&quot;:&quot;choice&quot;,&quot;title&quot;:&quot;Tattoos&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;visible&quot;,&quot;title&quot;:&quot;Visible&quot;},{&quot;name&quot;:&quot;not_visible&quot;,&quot;title&quot;:&quot;Not visible&quot;},{&quot;name&quot;:&quot;none&quot;,&quot;title&quot;:&quot;None&quot;}]},{&quot;name&quot;:&quot;waist&quot;,&quot;type&quot;:&quot;choice&quot;,&quot;title&quot;:&quot;Waist&quot;,&quot;options&quot;:[{&quot;name&quot;:&quot;20&quot;,&quot;title&quot;:&quot;20&quot;},{&quot;name&quot;:&quot;21&quot;,&quot;title&quot;:&quot;21&quot;},{&quot;name&quot;:&quot;22&quot;,&quot;title&quot;:&quot;22&quot;},{&quot;name&quot;:&quot;23&quot;,&quot;title&quot;:&quot;23&quot;},{&quot;name&quot;:&quot;24&quot;,&quot;title&quot;:&quot;24&quot;},{&quot;name&quot;:&quot;25&quot;,&quot;title&quot;:&quot;25&quot;},{&quot;name&quot;:&quot;26&quot;,&quot;title&quot;:&quot;26&quot;},{&quot;name&quot;:&quot;27&quot;,&quot;title&quot;:&quot;27&quot;},{&quot;name&quot;:&quot;28&quot;,&quot;title&quot;:&quot;28&quot;},{&quot;name&quot;:&quot;29&quot;,&quot;title&quot;:&quot;29&quot;},{&quot;name&quot;:&quot;30&quot;,&quot;title&quot;:&quot;30&quot;},{&quot;name&quot;:&quot;31&quot;,&quot;title&quot;:&quot;31&quot;},{&quot;name&quot;:&quot;32&quot;,&quot;title&quot;:&quot;32&quot;},{&quot;name&quot;:&quot;33&quot;,&quot;title&quot;:&quot;33&quot;},{&quot;name&quot;:&quot;34&quot;,&quot;title&quot;:&quot;34&quot;},{&quot;name&quot;:&quot;35&quot;,&quot;title&quot;:&quot;35&quot;},{&quot;name&quot;:&quot;36&quot;,&quot;title&quot;:&quot;36&quot;},{&quot;name&quot;:&quot;37&quot;,&quot;title&quot;:&quot;37&quot;},{&quot;name&quot;:&quot;38&quot;,&quot;title&quot;:&quot;38&quot;},{&quot;name&quot;:&quot;39&quot;,&quot;title&quot;:&quot;39&quot;},{&quot;name&quot;:&quot;40&quot;,&quot;title&quot;:&quot;40&quot;},{&quot;name&quot;:&quot;41&quot;,&quot;title&quot;:&quot;41&quot;},{&quot;name&quot;:&quot;42&quot;,&quot;title&quot;:&quot;42&quot;},{&quot;name&quot;:&quot;43&quot;,&quot;title&quot;:&quot;43&quot;},{&quot;name&quot;:&quot;44&quot;,&quot;title&quot;:&quot;44&quot;},{&quot;name&quot;:&quot;45&quot;,&quot;title&quot;:&quot;45&quot;},{&quot;name&quot;:&quot;46&quot;,&quot;title&quot;:&quot;46&quot;},{&quot;name&quot;:&quot;47&quot;,&quot;title&quot;:&quot;47&quot;},{&quot;name&quot;:&quot;48&quot;,&quot;title&quot;:&quot;48&quot;},{&quot;name&quot;:&quot;49&quot;,&quot;title&quot;:&quot;49&quot;},{&quot;name&quot;:&quot;50&quot;,&quot;title&quot;:&quot;50&quot;}]}]" data-value="null" id="q" name="q" type="text" />
+<input type="submit" value="Search" />
+</div>
+<div class='clearer'></div>
+</form>
+
+
+<div class='jobs'>
+<h2 class='with_line_patern'>
+<span>
+Latest
+<a href="/manage/jobs">jobs</a>
+</span>
+</h2>
+<div class='list_data'>
+<table class='crud jobs_list'>
+<tr>
+<th class='first'>Name</th>
+<th>Dates</th>
+<th>Appl</th>
+<th>Shifts</th>
+<th>Status</th>
+<th></th>
+</tr>
+<tr>
+<td class='name'><a href="/manage/jobs/x0itr">Santander Bank</a></td>
+<td class='dates'>
+Jan 31
+<br>
+Feb 07
+</td>
+<td class='applications_count'>57</td>
+<td class='shifts_count'>
+0 / 40
+</td>
+<td class='public published'>
+Public
+</td>
+<td class='creator'><img alt="Stephen Johnston" class="creator_avatar manager_avatar" src="https://playground-yopmail.watuapp.com/assets/tenant/blank_avatar_200-a46401966443c298f244dc4632266848.png" title="Stephen Johnston" /></td>
+</tr>
+<tr>
+<td class='name'><a href="/manage/jobs/s3fzj">Nestle Roadshow</a></td>
+<td class='dates'>
+Jan 29
+<br>
+Mar 08
+</td>
+<td class='applications_count'>0</td>
+<td class='shifts_count'>
+0 / 576
+</td>
+<td class='public published'>
+Public
+</td>
+<td class='creator'><img alt="Stephen Johnston" class="creator_avatar manager_avatar" src="https://playground-yopmail.watuapp.com/assets/tenant/blank_avatar_200-a46401966443c298f244dc4632266848.png" title="Stephen Johnston" /></td>
+</tr>
+<tr>
+<td class='name'><a href="/manage/jobs/tnpa2">Adidas Track Day</a></td>
+<td class='dates'>
+Jan 17
+<br>
+Jan 18
+</td>
+<td class='applications_count'>11</td>
+<td class='shifts_count'>
+22 / 24
+</td>
+<td class='public published'>
+Public
+</td>
+<td class='creator'><img alt="Stephen Johnston" class="creator_avatar manager_avatar" src="https://playground-yopmail.watuapp.com/assets/tenant/blank_avatar_200-a46401966443c298f244dc4632266848.png" title="Stephen Johnston" /></td>
+</tr>
+<tr>
+<td class='name'><a href="/manage/jobs/r1ghh">Ralph Lauren fragrance launch</a></td>
+<td class='dates'>
+Jan 26
+<br>
+Feb 02
+</td>
+<td class='applications_count'>0</td>
+<td class='shifts_count'>
+0 / 32
+</td>
+<td class='private published'>
+Private
+</td>
+<td class='creator'><img alt="Christopher Nolan" class="creator_avatar manager_avatar" src="https://playground-yopmail.watuapp.com/uploads/manager/mq/ps/q/mqpsq/avatar/cropped_thumbnail_avatar.jpg?v=1421814882" title="Christopher Nolan" /></td>
+</tr>
+</table>
+</div>
+
+</div>
+<div class='clearer'></div>
+<div class='published_job_locations'>
+<h2 class='with_line_patern'>
+<span><a href="https://playground-yopmail.watuapp.com/manage/jobs?status=public">Your Published Jobs</a></span>
+</h2>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<div class='geo_map' data-entries='[{"lat":"40.707000732421875","lng":"-74.0068588256836","title":"Nestle Roadshow\n101 Maiden Lane, New York, 10038","url":"https://playground-yopmail.watuapp.com/manage/jobs/s3fzj"},{"lat":"40.74633","lng":"-73.982597","title":"Nestle Roadshow\n2 Park Avenue, New York, 10016","url":"https://playground-yopmail.watuapp.com/manage/jobs/s3fzj"},{"lat":"40.75881667435169","lng":"-73.97074073553085","title":"Santander Bank\n630 Lexington Avenue, New York, 10017","url":"https://playground-yopmail.watuapp.com/manage/jobs/x0itr"},{"lat":"40.758022","lng":"-73.969551","title":"Santander Bank\n880 Third Avenue, New York, 10022","url":"https://playground-yopmail.watuapp.com/manage/jobs/x0itr"},{"lat":"40.753925","lng":"-73.971473","title":"Santander Bank\n757 Third Avenue, New York, 10017","url":"https://playground-yopmail.watuapp.com/manage/jobs/x0itr"},{"lat":"40.756961","lng":"-73.975906","title":"Santander Bank\n425 Madison, New York, 10017, NY","url":"https://playground-yopmail.watuapp.com/manage/jobs/x0itr"},{"lat":"40.754074","lng":"-73.973487","title":"Santander Bank\n485 Lexington Avenue, New York, 10017, NY","url":"https://playground-yopmail.watuapp.com/manage/jobs/x0itr"},{"lat":"40.752407535910606","lng":"-73.97527702152729","title":"Santander Bank\n425 Lexington Avenue, New York, 10174, NY","url":"https://playground-yopmail.watuapp.com/manage/jobs/x0itr"},{"lat":"40.750812","lng":"-73.973533","title":"Santander Bank\n205 East 42nd Street, New York, 10017, NY","url":"https://playground-yopmail.watuapp.com/manage/jobs/x0itr"},{"lat":"40.751051008701324","lng":"-73.97640690207481","title":"Santander Bank\n380 Lexington Avenue, New York, 10168, NY","url":"https://playground-yopmail.watuapp.com/manage/jobs/x0itr"},{"lat":"40.75178727507591","lng":"-73.97995814681053","title":"Santander Bank\n287 Madison Avenue, New York, 10017, NY","url":"https://playground-yopmail.watuapp.com/manage/jobs/x0itr"},{"lat":"40.74967956542969","lng":"-73.98302459716797","title":"Santander Bank\n389 5th Avenue, New York, 10016, NY","url":"https://playground-yopmail.watuapp.com/manage/jobs/x0itr"},{"lat":"40.70237897336483","lng":"-74.01127696037292","title":"Adidas Track Day\n50 Broadway, New York, 10004, NY","url":"https://playground-yopmail.watuapp.com/manage/jobs/tnpa2"}]' data-fit-entries='true'></div>
+</div>
+<br>
+<br>
+<h2 class='with_line_patern'>
+<span><a href="https://playground-yopmail.watuapp.com/manage/staffers/search?q=state%E2%86%92pending">4 New Applicants (out of 5)</a></span>
+</h2>
+<ol class='cards_list users'>
+<li class='user card' data-rid='jjx0y'>
+<div class='card_outer'>
+<div class='card_inner'>
+<div class='picture_container'>
+<img alt="Profile picture" class="avatar" src="https://playground-yopmail.watuapp.com/uploads/staffer/jj/x0/y/jjx0y/avatar/cropped_thumbnail_avatar.jpg?v=1421815013" title="Profile picture for Marisa Tomei" />
+
+</div>
+<div class='name card_title'>
+<a href="https://playground-yopmail.watuapp.com/manage/staffers/jjx0y">Marisa Tomei
+<span class='age'>&nbsp;35</span>
+</a></div>
+<div class='email data_item'><a href="https://playground-yopmail.watuapp.com/manage/messages/new?rids=jjx0y&amp;type=email" class="message_pop_in">marisa.tomei@example.net</a></div>
+<div class='loc data_item'>
+<a href="https://maps.google.com/maps?q=380+Lexington+Avenue%2C+New+York%2C+NY%2C+10168%2C+United+States" target="_blank">New York, 10168
+</a></div>
+<img alt="User_list_pending_band" class="user_status_band" src="https://playground-yopmail.watuapp.com/assets/tenant/manage/user_list_pending_band-08db082154c7e11b09d83d2bb0bd5f22.png" title="Pending" />
+</div>
+</div>
+</li>
+
+<li class='user card' data-rid='0nxoi'>
+<div class='card_outer'>
+<div class='card_inner'>
+<div class='picture_container'>
+<img alt="Profile picture" class="avatar" src="https://playground-yopmail.watuapp.com/uploads/staffer/0n/xo/i/0nxoi/avatar/cropped_thumbnail_avatar.jpg?v=1421814917" title="Profile picture for Christopher Walken" />
+
+</div>
+<div class='name card_title'>
+<a href="https://playground-yopmail.watuapp.com/manage/staffers/0nxoi">Christopher Walken
+<span class='age'>&nbsp;35</span>
+</a></div>
+<div class='email data_item'><a href="https://playground-yopmail.watuapp.com/manage/messages/new?rids=0nxoi&amp;type=email" class="message_pop_in">christopher.walken@example.net</a></div>
+<div class='phone data_item'><a href="https://playground-yopmail.watuapp.com/manage/messages/new?rids=0nxoi&amp;type=sms" class="message_pop_in">5559487385</a></div>
+<img alt="User_list_pending_band" class="user_status_band" src="https://playground-yopmail.watuapp.com/assets/tenant/manage/user_list_pending_band-08db082154c7e11b09d83d2bb0bd5f22.png" title="Pending" />
+</div>
+</div>
+</li>
+
+<li class='user card' data-rid='xw0o3'>
+<div class='card_outer'>
+<div class='card_inner'>
+<div class='picture_container'>
+<img alt="Profile picture" class="avatar" src="https://playground-yopmail.watuapp.com/uploads/staffer/xw/0o/3/xw0o3/avatar/cropped_thumbnail_avatar.jpg?v=1421814905" title="Profile picture for Charlize Theron" />
+
+</div>
+<div class='name card_title'>
+<a href="https://playground-yopmail.watuapp.com/manage/staffers/xw0o3">Charlize Theron
+<span class='age'>&nbsp;35</span>
+</a></div>
+<div class='email data_item'><a href="https://playground-yopmail.watuapp.com/manage/messages/new?rids=xw0o3&amp;type=email" class="message_pop_in">charlize.theron@example.net</a></div>
+<img alt="User_list_pending_band" class="user_status_band" src="https://playground-yopmail.watuapp.com/assets/tenant/manage/user_list_pending_band-08db082154c7e11b09d83d2bb0bd5f22.png" title="Pending" />
+</div>
+</div>
+</li>
+
+<li class='user card' data-rid='o4oon'>
+<div class='card_outer'>
+<div class='card_inner'>
+<div class='picture_container'>
+<img alt="Profile picture" class="avatar" src="https://playground-yopmail.watuapp.com/uploads/staffer/o4/oo/n/o4oon/avatar/cropped_thumbnail_avatar.jpg?v=1421814894" title="Profile picture for Brad Pitt" />
+<div class='staffer_rating_container'>
+<div class='histogram'>
+<div class='column_1_container column_container'>
+<div class='column_1_fill column_fill' style='height: 0.0%'></div>
+</div>
+<div class='column_2_container column_container'>
+<div class='column_2_fill column_fill' style='height: 0.0%'></div>
+</div>
+<div class='column_3_container column_container'>
+<div class='column_3_fill column_fill' style='height: 19.3%'></div>
+</div>
+<div class='column_4_container column_container'>
+<div class='column_4_fill column_fill' style='height: 0.0%'></div>
+</div>
+<div class='column_5_container column_container'>
+<div class='column_5_fill column_fill' style='height: 0.0%'></div>
+</div>
+</div>
+<div class='rating'>3.0</div>
+<div class='clearer'></div>
+</div>
+
+</div>
+<div class='name card_title'>
+<a href="https://playground-yopmail.watuapp.com/manage/staffers/o4oon">Brad Pitt
+<span class='age'>&nbsp;35</span>
+</a></div>
+<div class='email data_item'><a href="https://playground-yopmail.watuapp.com/manage/messages/new?rids=o4oon&amp;type=email" class="message_pop_in">brad.pitt@example.net</a></div>
+<div class='phone data_item'><a href="https://playground-yopmail.watuapp.com/manage/messages/new?rids=o4oon&amp;type=sms" class="message_pop_in">5554348335</a></div>
+<div class='loc data_item'>
+<a href="https://maps.google.com/maps?q=530+7th+Avenue%2C+New+York%2C+NY%2C+10018%2C+United+States" target="_blank">New York, 10018
+</a></div>
+<img alt="User_list_pending_band" class="user_status_band" src="https://playground-yopmail.watuapp.com/assets/tenant/manage/user_list_pending_band-08db082154c7e11b09d83d2bb0bd5f22.png" title="Pending" />
+</div>
+</div>
+</li>
+
+</ol>
+<div class='clearer'></div>
+
+</div>
+</div>
+</div>
+<footer>
+<nav class='navbar navbar-default' role='navigation'>
+<div class='container-fluid'>
+<div class='navbar-text'><a href="https://watuapp.com/">Watu</a></div>
+<div class='navbar-text'><a href="http://watu.freshdesk.com">Support</a></div>
+<div class='navbar-text'><a href="http://status.watuapp.com">Status</a></div>
+<div class='navbar-text'><a href="mailto:info@watuapp.com">Contact us</a></div>
+<div class='navbar-text pull-right'>Lovingly cared for by <a href="https://watuapp.com/">Watu</a>.</div>
+</div>
+</nav>
+</footer>
+</div>
+</div>
+</div>
+<script>
+    function freshWidgetInit() {
+        FreshWidget.init("", {
+            "queryString": "&formTitle=Tech+Support&submitThanks=Thank+you+for+your+message.+We'll+get+in+touch+with+you+soon.&helpdesk_ticket[requester]=stephen.johnston@yopmail.com",
+            "buttonText": "Tech Support",
+            "buttonColor": "white",
+            "buttonBg": "#222222",
+            "alignment": "3",
+            "offset": "25px",
+            "url": "https://watu.freshdesk.com",
+            "assetUrl": "https://s3.amazonaws.com/assets.freshdesk.com/widget"
+        });
+    }
+</script>
+<script onload="freshWidgetInit()" src="https://s3.amazonaws.com/assets.freshdesk.com/widget/freshwidget.js" type="text/javascript"></script>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-25620506-2', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<script id="IntercomSettingsScriptTag">
+    window.intercomSettings = { "email": "stephen.johnston@yopmail.com", "name": "Stephen Johnston", "created_at": 1421814872, "user_id": 378732, "type": "Manager", "user_hash": "d63fbb5752b59146a1ac6f1b5d065f0a0e41f097cb2e5730b6b6cb5e12504643", "app_id": "017a39f9c701856c1bd4b2755b90e19f8ec317c5", "company": { "id": 1075, "name": "Yop Mail", "created_at": 1421814871 } };
+</script>
+<script>(function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/017a39f9c701856c1bd4b2755b90e19f8ec317c5'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } }; })()</script>
+</body>
+</html>
+
+<!-- This is a random-length HTML comment: dmfurmgjerbaqewpuxceesxhaavjbtvscfyalrggueivsys -->

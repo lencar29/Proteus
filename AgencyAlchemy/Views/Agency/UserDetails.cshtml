@@ -1,0 +1,269 @@
+﻿@{
+    ViewBag.Title = "User Detail";
+}
+
+<div class="span12">
+	<div class="contain " id="user_manage_view-breadcrumb">
+	    <ul class="breadcrumb">
+	        <li>
+		        <a href="/superadmin/user_manage">User Management</a>
+	        </li>
+	        <li class="active">
+		        Scott Detweiler
+	        </li>
+        </ul>
+	</div>		
+    <div class="well contain" id="user_manage_view-summary" >
+        <h1>Detweiler, Scott</h1>
+        <p>Info with edit ability...</p>
+        <div class="clearfix" />
+    </div>		
+    <div class="contain " id="user_manage_view-tabs">
+	    <ul class="nav nav-tabs">
+	        <li class="active"><a href="#general" data-toggle="tab">General Flags</a></li>
+	        <li><a href="#agency" data-toggle="tab">Agency Flags</a></li>
+	        <li><a href="#client" data-toggle="tab">Client Flags</a></li>
+        </ul>
+        <div class="tab-content">
+	        <div class="tab-pane active" id="general">
+		        <table class="table table-striped table-hover table-condensed">
+	                <tr>
+		                <th>Category</th>
+		                <th>Flag</th>
+		                <th>Enabled</th>
+	                </tr>  
+		                <tr>
+		                <td>General</td>
+		                <td>is_active</td>
+		                <td><input type="checkbox" class="checkbox-handler" name="flag_0_6" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':6}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+	                </tr>
+		                <tr>
+		                <td>General</td>
+		                <td>is_authenticated</td>
+		                <td><input type="checkbox" class="checkbox-handler" name="flag_0_21" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':21}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+	                </tr>
+		                <tr>
+		                <td>Superadmin</td>
+		                <td>is_superadmin</td>
+		                <td><input type="checkbox" class="checkbox-handler" name="flag_0_1" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':1}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+	                </tr>
+		                <tr>
+		                <td>Superadmin</td>
+		                <td>superadmin_usermanage</td>
+		                <td><input type="checkbox" class="checkbox-handler" name="flag_0_7" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':7}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+	                </tr>
+		            <tr>
+		                <td>Talent</td>
+		                <td>talent_is_freelance</td>
+		                <td><input type="checkbox" class="checkbox-handler" name="flag_0_9" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':9}" > <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+	                </tr>
+	            </table>
+	        </div>
+	        <div class="tab-pane" id="agency">
+		        <div class="accordion" id="accordion_agency">
+			        <div class="accordion-group">
+			            <div class="accordion-heading">
+				            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_agency" href="#collapse_a5">
+					            Motivated Models
+				            </a>
+			            </div>
+				        <div id="collapse_a5" class="accordion-body collapse">
+					        <div class="accordion-inner">
+						        <table class="table table-hover">
+						            <tr>
+							            <th>Category</th>
+							            <th>Flag</th>
+							            <th>Enabled</th>
+						            </tr>  
+						            <tr>
+							            <td>Clients</td>
+							            <td>client_add</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_5_10" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':10,'agency':5}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>Clients</td>
+							            <td>client_delete</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_5_16" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':16,'agency':5}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>Events</td>
+							            <td>event_add</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_5_12" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':12,'agency':5}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>Events</td>
+							            <td>event_delete</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_5_13" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':13,'agency':5}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>Events</td>
+							            <td>event_edit</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_5_14" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':14,'agency':5}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>Events</td>
+							            <td>event_manage_talent</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_5_15" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':15,'agency':5}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>General</td>
+							            <td>agency_is_active</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_5_8" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':8,'agency':5}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>General</td>
+							            <td>is_agencyadmin</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_5_2" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':2,'agency':5}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>General</td>
+							            <td>is_clientmanager</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_5_27" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':27,'agency':5}" > <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>General</td>
+							            <td>is_talent</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_5_4" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':4,'agency':5}" > <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>General</td>
+							            <td>is_talentmanager</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_5_26" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':26,'agency':5}" > <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>General</td>
+							            <td>talent_add</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_5_11" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':11,'agency':5}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>Talent</td>
+							            <td>is_applicant</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_5_28" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':28,'agency':5}" > <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>Talent</td>
+							            <td>talent_is_displayed</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_5_23" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':23,'agency':5}" > <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>Talent</td>
+							            <td>talent_is_featured</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_5_5" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':5,'agency':5}" > <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+					            </table>
+					        </div>
+				        </div>
+			        </div>
+				    <div class="accordion-group">
+				        <div class="accordion-heading">
+					        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_agency" href="#collapse_a1">
+						        Sample Agency
+					        </a>
+				        </div>
+				        <div id="collapse_a1" class="accordion-body collapse">
+					        <div class="accordion-inner">
+						        <table class="table table-hover">
+						            <tr>
+							            <th>Category</th>
+							            <th>Flag</th>
+							            <th>Enabled</th>
+						            </tr>  
+						            <tr>
+							            <td>Clients</td>
+							            <td>client_add</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_1_10" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':10,'agency':1}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>Clients</td>
+							            <td>client_delete</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_1_16" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':16,'agency':1}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>Events</td>
+							            <td>event_add</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_1_12" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':12,'agency':1}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>Events</td>
+							            <td>event_delete</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_1_13" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':13,'agency':1}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>Events</td>
+							            <td>event_edit</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_1_14" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':14,'agency':1}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>Events</td>
+							            <td>event_manage_talent</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_1_15" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':15,'agency':1}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>General</td>
+							            <td>agency_is_active</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_1_8" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':8,'agency':1}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>General</td>
+							            <td>is_agencyadmin</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_1_2" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':2,'agency':1}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>General</td>
+							            <td>is_clientmanager</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_1_27" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':27,'agency':1}" > <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>General</td>
+							            <td>is_talent</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_1_4" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':4,'agency':1}" > <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>General</td>
+							            <td>is_talentmanager</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_1_26" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':26,'agency':1}" > <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>General</td>
+							            <td>talent_add</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_1_11" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':11,'agency':1}" checked> <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>Talent</td>
+							            <td>is_applicant</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_1_28" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':28,'agency':1}" > <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>Talent</td>
+							            <td>talent_is_displayed</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_1_23" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':23,'agency':1}" > <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						            <tr>
+							            <td>Talent</td>
+							            <td>talent_is_featured</td>
+							            <td><input type="checkbox" class="checkbox-handler" name="flag_1_5" data="{'handler':'/ajax/masteradmin/user/setflag','id':2,'flagid':5,'agency':1}" > <img src="/images/spinner.gif" alt="Updating" title="Updating" style="display:none" class="spinner"></td>
+						            </tr>
+						        </table>
+					        </div>
+				        </div>
+			        </div>
+		        </div>
+	        </div>
+	        <div class="tab-pane" id="client">
+			    <p>This person is not a client.</p>
+	        </div>
+        </div>
+    </div>		
+    <div class="contain " id="user_manage_view-administrative">
+	    <div class="alert alert-info">
+	        <h3>Administrative Info</h3>
+	        <strong>System ID: </strong> 2<br />
+	        <strong>Created: </strong> May 17 2012  1:23PM<br />
+	        <strong>Approval Code: </strong> D28151CD-AA2F-48CF-A353-976B93E24EAC<br />
+	        <strong>Email: </strong> scott.detweiler@gmail.com<br />
+	        <strong>Is Agency Admin: </strong> Yes<br/ >
+	        <strong>Birthdate: </strong> <br />
+        </div>
+    </div>    
+</div>
+

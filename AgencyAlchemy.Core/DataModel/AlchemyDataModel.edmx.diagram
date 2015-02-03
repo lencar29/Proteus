@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="73c3b1e0d2184420aa26ca4aecb4a0ab" Name="Diagram1" ZoomLevel="45">
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.agency" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.agency_applicants" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.agency_metrics_categories" Width="1.5" PointX="6" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.agency_people" Width="1.5" PointX="3" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.agency_people_rates" Width="1.5" PointX="8.25" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.client_dispositions" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.client" Width="1.5" PointX="0.75" PointY="33.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.collection" Width="1.5" PointX="0.75" PointY="40.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.collectiontalent" Width="1.5" PointX="3" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.contact_logs" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.contract" Width="1.5" PointX="6" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.domain" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.event_dates" Width="1.5" PointX="6" PointY="57.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.event_people" Width="1.5" PointX="6" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.event_slotavailable" Width="1.5" PointX="8.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.event_slotdates" Width="1.5" PointX="11.25" PointY="57.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.event_slots" Width="1.5" PointX="9" PointY="56" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.event_statuses" Width="1.5" PointX="1.5" PointY="58" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.event" Width="1.5" PointX="3.75" PointY="54.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.flag" Width="1.5" PointX="0.75" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.location" Width="1.5" PointX="9.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.log" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.mailer" Width="1.5" PointX="3" PointY="28.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.medium" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.mediacategory" Width="1.5" PointX="10.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.metric" Width="1.5" PointX="6.75" PointY="53.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.metrics_categories" Width="1.5" PointX="3.75" PointY="72" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.metrics_custom" Width="1.5" PointX="3" PointY="34.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.note" Width="1.5" PointX="3" PointY="37.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.page_settings" Width="1.5" PointX="3" PointY="64.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.page" Width="1.5" PointX="3" PointY="67.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.payment" Width="1.5" PointX="8.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.person" Width="1.5" PointX="0.75" PointY="16.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.people_locations" Width="1.5" PointX="3" PointY="41.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.people_metrics" Width="1.5" PointX="3" PointY="44.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.people_rating" Width="1.5" PointX="3" PointY="47.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.position_statuses" Width="1.5" PointX="10.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.private_notes" Width="1.5" PointX="3" PointY="51" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.rate_types" Width="1.5" PointX="6" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.skin" Width="1.5" PointX="11.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.smartcollection_metrics" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.state" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.tag_usage" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.tag" Width="1.5" PointX="5.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.testimonial" Width="1.5" PointX="3" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.v_agency_people" Width="1.5" PointX="12.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.v_events" Width="1.5" PointX="14.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.v_log" Width="1.5" PointX="14.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.v_people_metrics" Width="1.5" PointX="14.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.v_slots" Width="1.5" PointX="16.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_agency_skills_agencies" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_client_dispositions_agencies" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_collections_agencies" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_domains_agencies" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_events_agencies" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_logins_agencies" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_mailer_agencies" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_media_agencies" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_page_settings_agencies" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_pages_agencies" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_rate_types_agencies" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_testimonials_agencies" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_agency_skills_metrics_categories" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_agency_people_rates_agency_people" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_logins_clients" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_logins_people" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_agency_people_rates_rate_types" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_collections_clients" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_events_clients" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_collectiontalent_collections" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_collectiontalent_people" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_contracts_events" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_contracts_people" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_event_dates_events" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_event" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_people" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_event_slotdates_event_slots" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_event_slots_events" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_events_event_statuses" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_metrics_metrics_categories" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_metrics_custom_people" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_notes_people" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_people_locations_people" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_people_skills_people" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_peoplerating_source_people_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_peoplerating_target_people_fk" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_private_notes_people" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_testimonials_people" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_tag_usage_tags" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.agencypeople_flags" ManuallyRouted="false" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.slot_metrics" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.agency_people_roles" Width="1.5" PointX="0.015254566453050154" PointY="18.473523446579243" />
+        <EntityTypeShape EntityType="AgencyAlchemy.Core.Data.role" Width="1.5" PointX="5.69054978233322" PointY="3.231521533444301" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_agency_people_roles_agencies" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_agency_people_roles_people" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_agency_people_roles_roles" />
+        <AssociationConnector Association="AgencyAlchemy.Core.Data.FK_people_people" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

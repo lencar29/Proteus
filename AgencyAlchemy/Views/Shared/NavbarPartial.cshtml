@@ -1,0 +1,115 @@
+﻿<div class="navbar-collapse collapse">
+    <ul class="nav navbar-nav navbar-right visible-xs">
+        @if(User.IsInRole("SuperAdmin") || User.IsInRole("AgencyAdmin")){
+        <li class="active">
+            <a href="~/Dashboard">
+            <i class="fa fa-home fa-fw"></i>
+            Dashboard
+            </a>
+        </li>}
+         @if(User.IsInRole("SuperAdmin")){
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-smile-o fa-fw"></i>
+                Super Admin
+            </a>
+            <ul class="dropdown-menu">
+                <li class="">
+                    <a href="~/Agency/List">
+                    <i class="fa fa-building-o fa-fw"></i>
+                    Agency Management
+                    </a>
+                </li>
+                <li class="">
+                    <a href="~/Agency/Settings">
+                    <i class="fa fa-building-o fa-fw"></i>
+                    Master Skill Tree
+                    </a>
+                </li>
+                <li class="">
+                    <a href="~/Agency/Settings">
+                    <i class="fa fa-building-o fa-fw"></i>
+                    Agency Settings
+                    </a>
+                </li>
+            </ul>
+        </li>}
+        @if(User.IsInRole("SuperAdmin") || User.IsInRole("AgencyAdmin")){
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="fa fa-smile-o fa-fw"></i>
+                Agency Admin
+            </a>
+            <ul class="dropdown-menu">
+               @* <li class="">
+                    <a href="~/Agency/Settings">
+                    <i class="fa fa-building-o fa-fw"></i>
+                    Skill Tree Management
+                    </a>
+                </li>*@
+                <li class="">
+                    <a href="~/Agency/Users">
+                    <i class="fa fa-building-o fa-fw"></i>
+                    User Management
+                    </a>
+                </li>
+                <li class="">
+                    <a href="~/Agency/Settings">
+                    <i class="fa fa-building-o fa-fw"></i>
+                    Contact Log
+                    </a>
+                </li>
+            </ul>
+        </li>}        
+        <li class="">
+            <a href="~/Clients">
+            <i class="fa fa-building-o fa-fw"></i>
+            Clients
+            </a>
+        </li>
+        <li class="">
+            <a href="~/Jobs">
+            <i class="fa fa-group fa-fw"></i>
+            Jobs
+            </a>
+        </li>
+        <li class="">
+            <a href="~/Talent">
+            <i class="fa fa-group fa-fw"></i>
+            Talent
+            </a>
+        </li>
+        <li class="">
+            <a href="~/Account/Settings">
+            <i class="fa fa-group fa-fw"></i>
+            Account Settings
+            </a>
+        </li>
+        @if(User.IsInRole("Talent")){
+        <li class="">
+            <a href="~/Profile/Edit">
+            <i class="fa fa-group fa-fw"></i>
+            Profile
+            </a>
+        </li>}
+        <li class="">
+        
+            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", style = "margin-left:15px; margin-top:10px;" }))
+            {
+            @Html.AntiForgeryToken()
+
+                <a rel="nofollow" href="javascript:document.getElementById('logoutForm').submit()">
+                <i class="fa fa-sign-out fa-fw"></i>
+                Log out
+                </a>
+            }                    
+                
+        </li>
+    </ul>
+    @*<form class="navbar-form navbar-right" method="get" action="https://playground-yopmail.watuapp.com/manage/staffers/search" accept-charset="UTF-8">
+        <div style="margin:0;padding:0;display:inline">
+            <input type="hidden" value="✓" name="utf8">
+        </div>
+        <input id="qs" class="form-control" type="text" placeholder="Search..." name="qs">
+    </form>*@
+</div>

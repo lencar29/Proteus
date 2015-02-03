@@ -1,0 +1,29 @@
+﻿@using AgencyAlchemy.Models;
+
+@model PagedItemsModel
+
+@{
+    ViewBag.Title = "Master Agency List";
+
+    WebGrid grid = new WebGrid(null, rowsPerPage: Model.PageSize, defaultSort: "agency_name");
+
+    grid.Bind(Model.Items, rowCount: Model.TotalRows, autoSortAndPage: false);
+}
+<div class="span12">
+    <div class="well contain" id="agency_manage-agency_list" >
+        <h3>Master Agency List</h3>
+        <div class="list_data" data-ng-controller="EventController">
+
+            @grid.GetHtml(tableStyle:"table table-striped table-hover table-condensed",
+            columns: grid.Columns(
+                grid.Column("agency_name", header:"Agency",style:"name"),
+                grid.Column("talent_count", header:"Talent", style:"shifts_count"),
+                grid.Column("event_count", header:"Events", style:"shifts_count"),
+                grid.Column("", header:"URL", format:@<text><a target="new" href="@String.Format("http://{0}.agencyalchemy.com", item.agency_url)">@item.agency_url</a></text>, style:"name"),
+                grid.Column("agency_taxid", header:"Tax ID", style:"shifts_count"),
+                grid.Column("agency_approved", header:"Approved")
+            )) 
+                   
+        </div>    
+    </div>
+</div>

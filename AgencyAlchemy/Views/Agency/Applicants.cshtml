@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Applicants";
+}
+
+{{foreach $applicants AS $applicant}}
+	<div class="well" id="applicant-{{$applicant.people_pk}}">
+		<div>
+			<a class="btn btn-success useHandler" data-toggle="modal" href="#" data-confirm="Are you sure you want to approve as exclusive?"  data="{'formid':'agency-apply-approve', 'applicant':'{{$applicant.people_pk}}', 'exclusive':'1'}">Sign as Exclusive</a>
+			<a class="btn btn-success useHandler" data-toggle="modal" href="#" data-confirm="Are you sure you want to approve as non-exclusive?"  data="{'formid':'agency-apply-approve', 'applicant':'{{$applicant.people_pk}}'}">Sign as Non-Exclusive</a>
+			<a class="btn btn-danger useHandler" data-toggle="modal" href="#" data-confirm="Are you sure you want to deny this applicant?"  data="{'formid':'agency-apply-deny', 'applicant':'{{$applicant.people_pk}}'}">Deny</a>
+			<a class="btn btn-default useHandler" data-toggle="modal" href="#" data-confirm="Are you sure you want to mark this applicant as fraudulent or spam?"  data="{'formid':'agency-apply-spam', 'applicant':'{{$applicant.people_pk}}'}">Report as Fraudulent or Spam</a>
+		</div>
+		<h1>{{$applicant.people_formalname}}</h1>
+
+		<address>
+			{{$applicant.people_location_name}}<br>
+			<abbr title="Phone">P:</abbr> {{$applicant.people_phone}}<br>
+			<abbr title="Email">E:</abbr> <a href="mailto:{{$applicant.people_email}}">{{$applicant.people_email}}</a>
+		</address>
+
+		{{if sizeof($applicant.media)}}
+			<div class="row" style="padding-top: 10px;">
+			{{foreach $applicant.media AS $image}}
+				<div class="col-md-3 col-sm-4 col-xs-12" id="{{$image.media_pk}}">
+					<a href="{{$image.media_path}}" class="{{if $image.media_type == 'photo'}}lightbox{{/if}}" target="_blank">
+						<img src="{{$image.media_thumb}}" alt="" class="thumbnail img-responsive">
+					</a>
+				</div>
+			{{/foreach}}
+			</div>
+		{{/if}}
+		
+		{{if $applicant.agencypeople_biography}}
+			<h3>Biography</h3>
+			{{$applicant.agencypeople_biography|nl2br}}
+		{{/if}}
+		
+		<h3>Skills & Measurements</h3>
+		<div>
+			{{foreach $applicant.metrics AS $metric}}
+				{{$metric}}<br>
+			{{/foreach}}
+		</div>
+	</div>
+{{/foreach}}
+

@@ -1,0 +1,128 @@
+﻿
+<!DOCTYPE html>
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch no-geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio no-localstorage no-sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" lang="en" style="">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    @if(Session["Favicon"] != null){
+        <link rel="shortcut icon" href="@Url.Content(Session["Favicon"].ToString())">
+    }
+   
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
+    <link type="text/css" rel="stylesheet" media="all" href="~/Content/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.google.com/uds/api/visualization/1.0/c87ae63acdbfcaca6f5ce7a34423cfbc/ui+en.css">
+    <link href="https://ajax.googleapis.com/ajax/static/modules/gviz/1.0/annotatedtimeline/annotatedtimeline.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://www.google.com/uds/api/visualization/1.0/c87ae63acdbfcaca6f5ce7a34423cfbc/format+en,default+en,ui+en,corechart+en.I.js"></script>
+    <script type="text/javascript" src="https://www.google.com/uds/?file=visualization&v=1&packages=annotatedtimeline&have=corechart"></script>
+    <script type="text/javascript" src="https://www.google.com/uds/api/visualization/1.0/c87ae63acdbfcaca6f5ce7a34423cfbc/annotatedtimeline+en.js"></script>
+
+    <script type="text/javascript" src="~/Scripts/search.js"></script>
+    <script type="text/javascript" src="~/Scripts/portfolio.js"></script>
+    <script type="text/javascript" src="~/Scripts/users_list.js"></script>
+    <script async="" src="//www.google-analytics.com/analytics.js" style="" ></script>
+    <script type="text/javascript" src="https://playground-yopmail.watuapp.com/javascript_constants.js?v=1422324582"></script>
+    <script type="text/javascript" src="~/Scripts/dashboard.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+    <style type="text/css">
+        .gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}
+
+        .gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}
+
+       @* @media print { 
+                .gm-style .gmnoprint, .gmnoprint { display:none }
+                }*@
+
+         .gm-style .gmnoscreen, .gmnoscreen { display:none }
+                
+
+        .gm-style{
+                font-family:Roboto,Arial,sans-serif;
+                font-size:11px;
+                font-weight:400;
+                text-decoration:none
+                }
+        
+
+    </style>
+    <style type="text/css">
+        .mr {
+            margin-right:5px;
+        }
+    </style>
+    <style id="fit-vids-style">       
+        .fluid-width-video-wrapper{width:100%;position:relative;padding:0;}
+        .fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}
+    </style>
+    <title>@ViewBag.Title</title>
+     @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="dashboard index dashboard_index" data-ng-app="main" data-ng-controller="RootController">
+    <div id="top-bar" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand logo">
+                    <a href="https://playground-yopmail.watuapp.com/manage">
+                        <img src="@Url.Content(Session["LogoThumb"].ToString())" alt="@Session["AgencyName"]">
+                    </a>
+                </div>
+            </div>
+            @Html.Partial("NavbarPartial")
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div id="left-column" class="col-sm-3 col-md-2 mr" >
+                @Html.Partial("SideBarPartial")
+            </div>
+            <div id="central-column" class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
+                <ol class="breadcrumb">
+                    <li>
+                    <a href="https://playground-yopmail.watuapp.com/">@Session["AgencyName"].ToString()</a>
+                    </li>
+                    <li class="active">Dashboard</li>
+                </ol>
+                <div id="flash_messages"> </div>
+                <div id="main-content">
+                    <div class="row">
+                        <div class="col-xs-12">@RenderBody()</div>
+                    </div>
+                </div>
+                <footer>
+                    <nav class="navbar navbar-default" role="navigation">
+                        <div class="container-fluid">
+                            <div class="navbar-text">
+                                <a href="https://watuapp.com/">Agency Alchemy</a>
+                            </div>
+                            <div class="navbar-text">
+                                <a href="http://watu.freshdesk.com">Support</a>
+                            </div>
+                            <div class="navbar-text">
+                                <a href="http://status.watuapp.com">Status</a>
+                            </div>
+                            <div class="navbar-text">
+                                <a href="mailto:info@watuapp.com">Contact us</a>
+                            </div>
+                        </div>
+                    </nav>
+                </footer>
+            </div>
+        </div>
+    </div>
+   
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/app")
+    @RenderSection("scripts", required: false)
+    @RenderSection("styles", required: false)
+</body>
+</html>
