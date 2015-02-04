@@ -87,3 +87,5 @@ D:\AgencyAlchemy.Web\AgencyAlchemy\AgencyAlchemy\bin\zh-Hans\System.Spatial.reso
 D:\AgencyAlchemy.Web\AgencyAlchemy\AgencyAlchemy\bin\zh-Hant\System.Spatial.resources.dll
 D:\AgencyAlchemy.Web\AgencyAlchemy\AgencyAlchemy\obj\Debug\AgencyAlchemy.dll
 D:\AgencyAlchemy.Web\AgencyAlchemy\AgencyAlchemy\obj\Debug\AgencyAlchemy.pdb
+D:\AgencyAlchemy.Web\AgencyAlchemy\AgencyAlchemy\obj\Debug\AgencyAlchemy.Properties.Resources.resources
+D:\AgencyAlchemy.Web\AgencyAlchemy\AgencyAlchemy\obj\Debug\AgencyAlchemy.Web.csproj.GenerateResource.Cache
