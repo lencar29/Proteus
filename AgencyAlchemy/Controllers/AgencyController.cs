@@ -110,7 +110,6 @@ namespace AgencyAlchemy.Controllers
             if (User.IsInRole("AgencyAdmin") && id != Convert.ToInt32(Session["AgencyID"]))
             {
                 throw new HttpException(401, Resources.UnauthorizedAccessMessage);
-                return null;
             }
 
             int totalRecords;

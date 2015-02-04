@@ -61,7 +61,7 @@ namespace AgencyAlchemy.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &quot;You are not authorized to view the requested page.&quot;.
+        ///   Looks up a localized string similar to You are not authorized to view the requested page..
         /// </summary>
         internal static string UnauthorizedAccessMessage {
             get {

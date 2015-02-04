@@ -89,3 +89,11 @@ D:\AgencyAlchemy.Web\AgencyAlchemy\AgencyAlchemy\obj\Debug\AgencyAlchemy.dll
 D:\AgencyAlchemy.Web\AgencyAlchemy\AgencyAlchemy\obj\Debug\AgencyAlchemy.pdb
 D:\AgencyAlchemy.Web\AgencyAlchemy\AgencyAlchemy\obj\Debug\AgencyAlchemy.Properties.Resources.resources
 D:\AgencyAlchemy.Web\AgencyAlchemy\AgencyAlchemy\obj\Debug\AgencyAlchemy.Web.csproj.GenerateResource.Cache
+D:\AgencyAlchemy.Web\AgencyAlchemy\AgencyAlchemy\bin\System.Web.Http.WebHost.dll
+D:\AgencyAlchemy.Web\AgencyAlchemy\AgencyAlchemy\bin\System.Web.Http.WebHost.xml
+D:\AgencyAlchemy.Web\AgencyAlchemy\AgencyAlchemy\bin\System.Web.Http.dll
+D:\AgencyAlchemy.Web\AgencyAlchemy\AgencyAlchemy\bin\System.Web.Http.xml
+D:\AgencyAlchemy.Web\AgencyAlchemy\AgencyAlchemy\bin\System.Net.Http.dll
+D:\AgencyAlchemy.Web\AgencyAlchemy\AgencyAlchemy\bin\System.Net.Http.xml
+D:\AgencyAlchemy.Web\AgencyAlchemy\AgencyAlchemy\bin\System.Net.Http.Formatting.dll
+D:\AgencyAlchemy.Web\AgencyAlchemy\AgencyAlchemy\bin\System.Net.Http.Formatting.xml
