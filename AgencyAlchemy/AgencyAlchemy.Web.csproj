@@ -181,6 +181,7 @@
     <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\EventController.cs" />
+    <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Controllers\TalentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
@@ -190,11 +191,6 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\PagedItemsModel.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="NavBars\Navbars.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Navbars.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -342,17 +338,6 @@
     <Content Include="Scripts\angular-cookies.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular.min.js.map" />
-    <Content Include="NavBars\Navbars.xsc">
-      <DependentUpon>Navbars.xsd</DependentUpon>
-    </Content>
-    <None Include="NavBars\Navbars.xsd">
-      <SubType>Designer</SubType>
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Navbars.Designer.cs</LastGenOutput>
-    </None>
-    <Content Include="NavBars\Navbars.xss">
-      <DependentUpon>Navbars.xsd</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\alchemy.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
@@ -428,9 +413,11 @@
     <Content Include="Views\Agency\Users.cshtml" />
     <Content Include="Views\Agency\UserDetails.cshtml" />
     <Content Include="Views\Agency\Dashboard.cshtml" />
+    <Content Include="Views\Error\Http401.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Logs\" />
     <Folder Include="Public\Files\Agency\6\" />
     <Folder Include="Public\Files\Agency\8\" />
     <Folder Include="Public\Files\Agency\9\" />

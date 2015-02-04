@@ -165,9 +165,38 @@ namespace AgencyAlchemy.Controllers
         {
             String[] roles = (String[]) Session["Roles"];
 
-            IDictionary<String, String> path = ((UserPathManager)ControllerContext.HttpContext.Application["UserPathManager"]).GetUserPath(roles);  
+            UserPathManager path = GetUserDefaultPath(roles);  
 
-            return RedirectToAction(path["Action"], path["Controller"]);       
+            if(path.RouteValues != null)
+                return RedirectToAction(path.Action, path.Controller, path.RouteValues);   
+
+            return RedirectToAction(path.Action, path.Controller);       
+        }
+
+        public UserPathManager GetUserDefaultPath(params String[] roles)
+        {
+            UserPathManager pathManager = null;
+
+            if (roles.Contains("SuperAdmin"))
+            {
+                pathManager = ((UserPathManager)ControllerContext.HttpContext.Application["UserPathManager"]).GetUserPath("SuperAdmin");
+            }
+
+            if(roles.Contains("AgencyAdmin")){
+                pathManager = ((UserPathManager)ControllerContext.HttpContext.Application["UserPathManager"]).GetUserPath("AgencyAdmin");
+                pathManager.RouteValues = new { id = Session["AgencyID"] };
+            }
+
+            else if (roles.Contains("ClientAdmin"))
+            {
+                pathManager = ((UserPathManager)ControllerContext.HttpContext.Application["UserPathManager"]).GetUserPath("ClientAdmin");
+                pathManager.RouteValues = new { id = Session["AgencyID"] };
+            }
+
+            else
+                pathManager = ((UserPathManager)ControllerContext.HttpContext.Application["UserPathManager"]).GetUserPath(roles);
+
+            return pathManager;
         }
 
         //

@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Diagnostics;
 using System.Linq;
 using System.Security.Principal;
 using System.Web;
+using System.Web.Configuration;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -61,7 +64,7 @@ namespace AgencyAlchemy
             if (Session.Count == 0)
             {
                 Agency agency = Agency.GetAgencyByDomain("login.motivatedmodels.com"); //TODO:Grab host from URL or subdomain name
-
+                                
                 Session.Add("Host", agency.agency_url);
                 Session.Add("AgencyID", agency.agency_pk);
                 Session.Add("AgencyName", agency.agency_name);
@@ -85,13 +88,14 @@ namespace AgencyAlchemy
         }
 
         void Application_Error(object sender, EventArgs e)
-        {
+        { 
             var error = Server.GetLastError();
             var code = (error is HttpException) ? (error as HttpException).GetHttpCode() : 500;
             var httpContext = HttpContext.Current;
 
-            if (code != 404)
-                //TODO: Add error logger            
+            ErrorHandler handler = new ErrorHandler(Server.MapPath("~/Logs"), "AgencyAlchemy"); //TODO: Create App Setting
+
+            handler.HandleError(error);
 
             Response.Clear();
             Server.ClearError();

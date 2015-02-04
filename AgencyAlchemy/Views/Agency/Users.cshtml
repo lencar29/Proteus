@@ -9,7 +9,7 @@
     #pager li {
         list-style: none;
         float:left;
-        border:1px solid #000;
+        border:1px solid #f2eded;
         text-align:center;
         vertical-align:middle;
         margin-left:5px;
@@ -32,7 +32,11 @@
 		        </tr>
 	        </thead>
 	        <tbody>
-                @{int previousId = 0; }
+                @{ 
+                    int previousId = 0; 
+                    String url;
+                  }
+
                 @foreach(var user in Model.Items){
                     
 		            <tr>
@@ -40,11 +44,16 @@
 		                <td>@user.agencypeople_stagename</td>
 		                <td>@user.people_phone</td> 
 		                <td>@user.people_created</td>
-		                <td>			
-                            <a href="@String.Format(@"http://{0}.agencyalchemy.com", user.agency_name)">@user.agency_name</a>
+		                <td>		
+                           @{ url = String.Format(@"http://{0}.agencyalchemy.com", user.agency_url); }
+
+                            <a href='@url'>@user.agency_name</a>
 
                             @if (previousId == user.people_pk) {
-                                  <br /><a href="@String.Format(@"http://{0}.agencyalchemy.com", user.agency_name)">@user.agency_name</a>
+
+                                url = String.Format(@"http://{0}.agencyalchemy.com", user.agency_url);
+                                
+                                <br /><a href='@url'>@user.agency_name</a>
                             }
 			             
 				        </td>
@@ -61,23 +70,27 @@
         </table>
         
               @{
-                  int i = (Model.Page - 1) * Model.PageSize + 1;
-                  int previousPage = Model.Page - Model.PageSize;
-                  int nextPage = (i == 1)? Model.PageSize + 1: i;
+                  int i = Model.Page;
+                  int previousPage = ((Model.Page - Model.PageSize) < 1) ? 1 : Model.Page - Model.PageSize;
+                  int nextPage = (i == 1) ? Model.PageSize + 1 : Model.Page + Model.PageSize;
                 
                 }
 
                 @if (Model.Pages > 1) { 
                     
                     <ul id="pager">
-                        @if (Model.Page > Model.PageSize)
-                        { <li style="width:100px; height:25px"><a  href="/Agency/Users/@previousPage/@Model.PageSize">Previous</a> </li>}
-                        @while (i <= Model.Page * Model.PageSize) { 
-                            <li  style="width:25px;height:25px;float:left;"><a href="/Agency/Users/@i/@Model.PageSize">@i</a></li>
-                            ++i;
-                        }
+                        @if (Model.Page > 1)
+                        { <li style="width:100px; height:25px"><a href="/Agency/Users/@previousPage/@Model.PageSize">Previous</a> </li>}
                         
-                        @if (i <= Model.Pages) { <li style="width:100px; height:25px"><a href="/Agency/Users/@nextPage/@Model.PageSize">Next</a> </li>}
+                        @if (Model.Page != Model.Pages) { 
+                            
+                            while (i < Model.Page + Model.PageSize &&  i <= Model.Pages) { 
+                                <li  style="width:25px;height:25px;float:left;"><a href="/Agency/Users/@i/@Model.PageSize">@i</a></li>
+                                ++i;
+                            }
+                        
+                            if (i <= Model.Pages) { <li style="width:80px; height:25px"><a href="/Agency/Users/@nextPage/@Model.PageSize">Next</a> </li>}
+                        }
                     </ul>
                     
                 }

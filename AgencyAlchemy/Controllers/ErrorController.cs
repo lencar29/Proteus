@@ -16,15 +16,19 @@ namespace AgencyAlchemy.Controllers
             return View();
         }
 
+        public ActionResult Http401(String errorMessage)
+        {
+            return View(errorMessage);
+        }
 
         public ActionResult Http404(String errorMessage)
         {
-            return View();
+            return View(errorMessage);
         }
 
         public ActionResult Http500(String errorMessage)
         {
-            return View();
+            return View(errorMessage);
         }
     }
 }

@@ -102,37 +102,21 @@ namespace AgencyAlchemy.Controllers
             }
         }
 
-        [Authorize(Roles = "AgencyAdmin")]
+        [Authorize(Roles = "AgencyAdmin, SuperAdmin")]
         [OutputCache(Location = OutputCacheLocation.Client, Duration = 300, VaryByParam = "page, pageSize")]
-        public ActionResult Dashboard(int page = 1, int pageSize = 10)
+        public ActionResult Dashboard(int id, int page = 1, int pageSize = 10)
         {
+            if (User.IsInRole("AgencyAdmin") && id != Convert.ToInt32(Session["AgencyID"]))
+            {
+                throw new HttpException(401, "You are not authorized to view the requested page.");
+                return null;
+            }
+
             int totalRecords;
-            PagedItemsModel model = new PagedItemsModel();
+            PagedItemsModel model = new PagedItemsModel();            
 
             //TODO: Create composite to handle both agencies and applicants 
-            model.Items = EventStat.GetAgencyEventStats(Convert.ToInt32(Session["AgencyID"]), out totalRecords, page, pageSize);
-            model.TotalRows = totalRecords;
-            model.PageSize = pageSize;
-
-            if (Request.IsAjaxRequest()) ;
-            //TODO: Create partial            
-
-            return View(model);
-        }
-
-        [Authorize(Roles = "SuperAdmin")]
-        [OutputCache(Location = OutputCacheLocation.Client, Duration = 300, VaryByParam = "page, pageSize")]
-        public ActionResult Dashboard(String agencyUrl, int page = 1, int pageSize = 10)
-        {
-            int totalRecords;
-            PagedItemsModel model = new PagedItemsModel();
-            int agencyId = Agency.GetAgencyIdBySubDomainName(agencyUrl);
-
-            if (agencyId == 0)
-                throw new ArgumentException("The agencyUrl parameter is not valid: ~/Agency/Dashboard");
-
-            //TODO: Create composite to handle both agencies and applicants 
-            model.Items = EventStat.GetAgencyEventStats(agencyId, out totalRecords, page, pageSize);
+            model.Items = EventStat.GetAgencyEventStats(id, out totalRecords, page, pageSize);
             model.TotalRows = totalRecords;
             model.PageSize = pageSize;
 

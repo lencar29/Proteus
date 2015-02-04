@@ -4,7 +4,9 @@
     Layout = "~/Views/Shared/_LayoutLogin.cshtml";
 }
 
-@{ //TODO: Jazz up the current Agency Alchemy Registration form and replace this with that.}
+@{ 
+    //TODO: Jazz up the current Agency Alchemy Registration form and replace this with that.  
+}
 
 @using(Html.BeginForm("Register", "Account", FormMethod.Post, new {Class="simple_form form-horizontal", id="new_user",  role="form"})){
     @Html.AntiForgeryToken()

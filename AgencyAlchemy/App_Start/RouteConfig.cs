@@ -26,6 +26,18 @@ namespace AgencyAlchemy
             );
 
             routes.MapRoute(
+                name: "UsersList",
+                url: "Agency/Users/{page}/{pageSize}",
+                defaults: new
+                {
+                    controller = "Agency",
+                    action = "Users",
+                    page = UrlParameter.Optional,
+                    pageSize = UrlParameter.Optional
+                }
+            );
+
+            routes.MapRoute(
                 name: "Login",
                 url: "Account/Login",
                 defaults: new { controller = "Account", action = "Login"}
