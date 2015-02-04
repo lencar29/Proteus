@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Web.UI;
 using AgencyAlchemy.Core.Data;
 using AgencyAlchemy.Models;
+using AgencyAlchemy.Properties;
 
 namespace AgencyAlchemy.Controllers
 {
@@ -108,7 +109,7 @@ namespace AgencyAlchemy.Controllers
         {
             if (User.IsInRole("AgencyAdmin") && id != Convert.ToInt32(Session["AgencyID"]))
             {
-                throw new HttpException(401, "You are not authorized to view the requested page.");
+                throw new HttpException(401, Resources.UnauthorizedAccessMessage);
                 return null;
             }
 

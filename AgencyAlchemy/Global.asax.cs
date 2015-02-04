@@ -94,7 +94,6 @@ namespace AgencyAlchemy
             var httpContext = HttpContext.Current;
 
             ErrorHandler handler = new ErrorHandler(Server.MapPath("~/Logs"), "AgencyAlchemy"); //TODO: Create App Setting
-
             handler.HandleError(error);
 
             Response.Clear();

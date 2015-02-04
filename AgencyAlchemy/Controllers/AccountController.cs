@@ -182,7 +182,7 @@ namespace AgencyAlchemy.Controllers
                 pathManager = ((UserPathManager)ControllerContext.HttpContext.Application["UserPathManager"]).GetUserPath("SuperAdmin");
             }
 
-            if(roles.Contains("AgencyAdmin")){
+            else if(roles.Contains("AgencyAdmin")){
                 pathManager = ((UserPathManager)ControllerContext.HttpContext.Application["UserPathManager"]).GetUserPath("AgencyAdmin");
                 pathManager.RouteValues = new { id = Session["AgencyID"] };
             }
